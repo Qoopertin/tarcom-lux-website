@@ -111,37 +111,66 @@
     }
 }
 
+/* Full-screen Mobile Menu */
 .mobile-menu {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--color-bg-white);
-    padding: 1rem 0;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .mobile-nav-link {
-    padding: 1rem 2rem;
-    color: var(--color-text-main);
-    font-weight: 500;
-    border-bottom: 1px solid var(--color-bg-light);
+    padding: 0.5rem;
+    color: var(--color-bg-white);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.mobile-actions {
-    padding: 1rem 2rem;
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: var(--color-accent);
+    transform: scale(1.05);
 }
 
 .mobile-cta {
-    margin: 1rem 2rem;
-    text-align: center;
-    display: block;
-    width: fit-content;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-bg-white);
 }
 
-/* Touch-friendly mobile menu */
+.mobile-cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-white);
+}
+
+/* Touch-friendly mobile menu adjustments */
 @media (max-width: 1023px) {
     .navbar {
         height: var(--header-height);
@@ -153,12 +182,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .mobile-nav-link {
-        min-height: 48px;
-        display: flex;
-        align-items: center;
     }
 
     .logo {

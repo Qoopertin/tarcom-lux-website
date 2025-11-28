@@ -77,12 +77,21 @@ const Navbar = () => {
                 {isMobileMenuOpen && (
                     <div className="mobile-menu">
                         {navLinks.map((link) => (
-                            <Link key={link.name} to={link.path} className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}>
+                            <Link
+                                key={link.name}
+                                to={link.path}
+                                className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
                                 {link.name}
                             </Link>
                         ))}
                         {/* Mobile CTA button */}
-                        <Link to="/contact" className="cta-button-small mobile-cta">
+                        <Link
+                            to="/contact"
+                            className="cta-button-small mobile-cta"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
                             {t('nav.contact')}
                         </Link>
                     </div>
