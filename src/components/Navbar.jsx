@@ -60,18 +60,22 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="mobile-menu-toggle"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                {/* Mobile Actions */}
+                <div className="mobile-actions-wrapper">
+                    <div className="mobile-lang-switcher">
+                        <LanguageSwitcher />
+                    </div>
+                    <button
+                        className="mobile-menu-toggle"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <div className="mobile-menu">
-                        <LanguageSwitcher />
                         {navLinks.map((link) => (
                             <Link key={link.name} to={link.path} className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}>
                                 {link.name}
