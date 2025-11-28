@@ -1,0 +1,9 @@
+.page-padding {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 4rem;
+}
+
+.page-padding h1 {
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
+}

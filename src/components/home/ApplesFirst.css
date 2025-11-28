@@ -1,0 +1,64 @@
+.apples-first {
+    background-color: var(--color-bg-white);
+}
+
+.apples-first-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.apples-first .lead-text {
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+    margin-bottom: 2rem;
+}
+
+.varieties-list {
+    background-color: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.varieties-list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.varieties-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .varieties-list ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 3rem;
+    }
+}
+
+.varieties-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.varieties-list li::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.seasonal-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}

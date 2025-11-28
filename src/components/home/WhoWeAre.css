@@ -1,0 +1,70 @@
+.section-padding {
+    padding: 6rem 0;
+}
+
+.who-we-are {
+    background-color: var(--color-bg-white);
+}
+
+.who-we-are-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .who-we-are-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-main);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.who-we-are-text p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.counters-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.counter-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-bg-light);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-5px);
+}
+
+.counter-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.counter-label {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}

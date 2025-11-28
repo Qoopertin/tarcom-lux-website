@@ -1,0 +1,51 @@
+.expectations {
+    background-color: var(--color-bg-light);
+}
+
+.expectations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .expectations-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.expectation-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.expectation-card:hover {
+    transform: translateY(-5px);
+}
+
+.expectation-icon {
+    color: var(--color-primary);
+    background: var(--color-bg-light);
+    padding: 1rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.expectation-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-main);
+}
+
+.expectation-text p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

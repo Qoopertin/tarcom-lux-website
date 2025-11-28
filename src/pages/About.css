@@ -1,0 +1,39 @@
+.about-page {
+    padding-top: 80px;
+}
+
+.page-header {
+    background-color: var(--color-bg-light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.personal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.personal-content .lead-text {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.closing-line {
+    font-weight: 600;
+    color: var(--color-accent);
+    font-size: 1.1rem;
+}

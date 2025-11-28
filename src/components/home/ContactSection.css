@@ -1,0 +1,26 @@
+.contact-section {
+    background-color: var(--color-bg-light);
+}
+
+.contact-cta-box {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.contact-cta-box .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

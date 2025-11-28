@@ -1,0 +1,192 @@
+.orchard-to-truck {
+    background-color: var(--color-bg-white);
+}
+
+.orchard-to-truck .section-header {
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+/* Central vertical line */
+.steps-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom,
+            var(--color-primary) 0%,
+            var(--color-accent) 100%);
+    border-radius: 3px;
+}
+
+.process-step {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Left Position */
+.process-step.left {
+    justify-content: flex-end;
+    padding-right: calc(50% + 3rem);
+}
+
+.process-step.left .step-content {
+    text-align: right;
+}
+
+.process-step.left .step-icon-wrapper {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Right Position */
+.process-step.right {
+    justify-content: flex-start;
+    padding-left: calc(50% + 3rem);
+}
+
+.process-step.right .step-content {
+    text-align: left;
+}
+
+.process-step.right .step-icon-wrapper {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Icon Wrapper (Centered on line) */
+.step-icon-wrapper {
+    position: absolute;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    color: var(--color-primary);
+}
+
+.step-number {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--color-accent);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/* Content Card */
+.step-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    position: relative;
+}
+
+/* Arrows pointing to center */
+.process-step.left .step-content::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 1.5rem;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    /* subtle border to match shadow hint */
+}
+
+.process-step.right .step-content::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 1.5rem;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.step-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+}
+
+.step-content p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .steps-container::before {
+        left: 2rem;
+        /* Move line to left */
+    }
+
+    .process-step.left,
+    .process-step.right {
+        justify-content: flex-start;
+        padding-left: 5rem;
+        /* Space for icon */
+        padding-right: 0;
+    }
+
+    .process-step.left .step-content,
+    .process-step.right .step-content {
+        text-align: left;
+    }
+
+    .process-step.left .step-icon-wrapper,
+    .process-step.right .step-icon-wrapper {
+        left: 2rem;
+        transform: translate(-50%, 0);
+    }
+
+    /* Adjust arrows for mobile (pointing left) */
+    .process-step.left .step-content::after,
+    .process-step.right .step-content::after {
+        left: -10px;
+        right: auto;
+        border-right: none;
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
