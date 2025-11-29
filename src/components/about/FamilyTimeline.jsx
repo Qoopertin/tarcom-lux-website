@@ -46,9 +46,9 @@ const FamilyTimeline = () => {
             position: 'right'
         },
         {
-            year: '2014',
-            text: t('timeline.events.e2014'),
-            icon: GraduationCap,
+            year: '2018',
+            text: t('timeline.events.e2018'),
+            icon: Warehouse,
             position: 'left'
         },
         {
@@ -58,8 +58,8 @@ const FamilyTimeline = () => {
             position: 'right'
         },
         {
-            year: '2025',
-            text: t('timeline.events.e2025'),
+            year: 'Today',
+            text: t('timeline.events.today'),
             icon: GraduationCap,
             position: 'center'
         }
