@@ -58,7 +58,7 @@ const FamilyTimeline = () => {
             position: 'right'
         },
         {
-            year: 'Today',
+            year: '2025',
             text: t('timeline.events.today'),
             icon: GraduationCap,
             position: 'center'

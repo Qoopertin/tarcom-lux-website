@@ -71,7 +71,7 @@
     transform: translateY(-50%);
 }
 
-/* Center-aligned final item (Today) */
+/* Center-aligned final item */
 .timeline-item.center {
     flex-direction: column;
     align-items: center;
@@ -154,9 +154,8 @@
     margin: 0;
 }
 
-/* Mobile responsive - centered vertical timeline */
+/* Mobile responsive - unified centered vertical timeline */
 @media (max-width: 768px) {
-    /* Keep timeline centered on mobile */
     .timeline-container {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -168,57 +167,48 @@
         bottom: -3rem;
     }
 
-    /* All items stack vertically in center */
+    /* All items use the same centered vertical layout */
     .timeline-item.left,
-    .timeline-item.right {
+    .timeline-item.right,
+    .timeline-item.center {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
     }
 
-    /* Center content cards and make them full-width with padding */
+    /* Year badges - always centered at top */
+    .timeline-item.left .timeline-year,
+    .timeline-item.right .timeline-year,
+    .timeline-item.center .timeline-year {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+
+    /* Icons - centered below year badge */
+    .timeline-item.left .timeline-icon-wrapper,
+    .timeline-item.right .timeline-icon-wrapper,
+    .timeline-item.center .timeline-icon-wrapper {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Content cards - full width below icon */
     .timeline-item.left .timeline-content,
-    .timeline-item.right .timeline-content {
+    .timeline-item.right .timeline-content,
+    .timeline-item.center .timeline-content {
         text-align: left;
         border-left: 4px solid var(--color-primary);
         border-right: none;
         width: 100%;
         max-width: 500px;
-    }
-
-    /* Year badges centered above cards */
-    .timeline-item.left .timeline-year,
-    .timeline-item.right .timeline-year {
-        position: static;
-        transform: none;
-        margin-bottom: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    /* Icons stay on the centered vertical line */
-    .timeline-icon-wrapper {
-        left: 50%;
-        transform: translate(-50%, 0);
-        top: 0;
-        position: relative;
-        margin-bottom: 0;
-    }
-
-    /* Center-aligned item adjustments */
-    .timeline-item.center {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .timeline-item.center .timeline-content {
-        max-width: 500px;
-        width: 100%;
-    }
-
-    .timeline-item.center .timeline-year {
-        font-size: 1.75rem;
     }
 }
