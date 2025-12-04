@@ -174,13 +174,13 @@ const translations = {
             title: "Our Family Journey",
             subtitle: "From the first apple gardens in 1995 towards exporting to European markets",
             events: {
-                e1995: "Grandfather plants first commercial apple gardens and first primitive cold underground storage for around 70 tons is built.",
-                e2000: "Father together with grandfather of the family plants own gardens. Around 20 hectares are purchased for that.",
-                e2003: "Local partner joins the group for the first time. Capacity grows to around 50 hectares.",
-                e2008: "Family builds first in the village cold storage for around 1000 tons with 4 chambers and acquires more fields for apple gardens. At that time cold storage was working almost at full capacity, shipping at least one truck a day during the season.",
-                e2014: "Grandson joins the business. Focus on stable first-class quality begins, and foundations are laid for direct export relationships with European partners.",
-                e2022: "Start of direct cooperation with Romanian and German importers as Russian market closes. Focus shifts fully to the EU.",
-                e2025: "TARCOM LUX: the export name connecting our family and partner farms, ready for stable long-term programs with European clients."
+                e1995: "Grandfather plants the first commercial apple gardens and builds a primitive underground cold store for around 70 tons of fruit.",
+                e2000: "Father, together with Grandfather, expands the family gardens. Around 20 more hectares are purchased and planted with apples.",
+                e2003: "As demand for packaging grows, Father launches a small production facility to supply wooden boxes for apples to growers in the region.",
+                e2008: "The family builds the first 1,000-ton cold store in our village and continues to expand the apple gardens around it. At peak season, at least one full truck was leaving our facility every day.",
+                e2018: "Father builds a much more efficient and modern refrigerated storage facility and starts planting plums alongside apples, diversifying the family production.",
+                e2022: "The fruit business in our area declines as the main export market to Russia collapses. Many local growers have no direct contacts with European buyers, so good fruit often stays in local storage or is sold too cheaply.",
+                today: "A younger generation educated in the EU takes over the task of opening direct routes to European buyers. Under the TARCOM LUX name we are now focusing on honest, well-prepared apple exports to Romania and other EU markets."
             }
         },
 
@@ -419,13 +419,13 @@ const translations = {
             title: "Călătoria familiei noastre",
             subtitle: "De la primele livezi din 1995 spre exportul pe piețele europene",
             events: {
-                e1995: "Bunicul plantează primele livezi comerciale de mere și se construiește primul depozit frigorific subteran primitiv pentru aproximativ 70 de tone.",
-                e2000: "Tatăl împreună cu bunicul familiei plantează propriile livezi. Aproximativ 20 de hectare sunt achiziționate pentru aceasta.",
-                e2003: "Partenerul local se alătură grupului pentru prima dată. Capacitatea crește la aproximativ 50 de hectare.",
-                e2008: "Familia construiește primul depozit frigorific din sat pentru aproximativ 1000 de tone cu 4 camere și achiziționează mai multe terenuri pentru livezi de mere. În acea perioadă depozitul frigorific funcționa aproape la capacitate maximă, expediind cel puțin un camion pe zi în timpul sezonului.",
-                e2014: "Nepotul se alătură afacerii. Începe focusul pe calitate stabilă de primă clasă și se pun bazele pentru relații directe de export cu partenerii europeni.",
-                e2022: "Începutul cooperării directe cu importatori români și germani pe măsură ce piața rusă se închide. Focusul se concentrează complet pe UE.",
-                e2025: "TARCOM LUX: numele de export care conectează fermele noastre de familie și partenere, pregătite pentru programe stabile pe termen lung cu clienți europeni."
+                e1995: "Bunicul plantează primele livezi comerciale de mere și construiește un depozit frigorific subteran primitiv pentru aproximativ 70 de tone de fructe.",
+                e2000: "Tatăl, împreună cu Bunicul, extinde livezile familiei. Aproximativ 20 de hectare în plus sunt cumpărate și plantate cu mere.",
+                e2003: "Pe măsură ce cererea de ambalaje crește, Tatăl lansează o mică unitate de producție pentru a furniza lăzi de lemn pentru mere cultivatorilor din regiune.",
+                e2008: "Familia construiește primul depozit frigorific de 1.000 de tone din satul nostru și continuă să extindă livezile de mere din jurul acestuia. În sezonul de vârf, cel puțin un camion plin pleca de la unitatea noastră în fiecare zi.",
+                e2018: "Tatăl construiește un depozit frigorific mult mai eficient și modern și începe să planteze prune alături de mere, diversificând producția familiei.",
+                e2022: "Afacerea cu fructe din zona noastră scade pe măsură ce principala piață de export către Rusia se prăbușește. Mulți cultivatori locali nu au contacte directe cu cumpărătorii europeni, așa că fructele bune rămân adesea în depozitele locale sau sunt vândute prea ieftin.",
+                today: "O generație mai tânără, educată în UE, preia sarcina de a deschide rute directe către cumpărătorii europeni. Sub numele TARCOM LUX ne concentrăm acum pe exporturi oneste și bine pregătite de mere către România și alte piețe din UE."
             }
         },
 
@@ -664,13 +664,13 @@ const translations = {
             title: "Путь нашей семьи",
             subtitle: "От первых садов в 1995 году до экспорта на европейские рынки",
             events: {
-                e1995: "Дедушка высаживает первые коммерческие яблоневые сады и строится первое примитивное подземное холодильное хранилище примерно на 70 тонн.",
-                e2000: "Отец вместе с дедушкой семьи высаживает собственные сады. Для этого приобретается около 20 гектаров.",
-                e2003: "Местный партнер впервые присоединяется к группе. Мощность вырастает до около 50 гектаров.",
-                e2008: "Семья строит первый в деревне холодильный склад примерно на 1000 тонн с 4 камерами и приобретает больше полей для яблоневых садов. В то время холодильник работал почти на полную мощность, отгружая как минимум одну фуру в день во время сезона.",
-                e2014: "Внук присоединяется к бизнесу. Начинается фокус на стабильном качестве первого класса, и закладываются основы для прямых экспортных отношений с европейскими партнерами.",
-                e2022: "Начало прямого сотрудничества с румынскими и немецкими импортерами, поскольку российский рынок закрывается. Фокус полностью смещается на ЕС.",
-                e2025: "TARCOM LUX: экспортное название, объединяющее наши семейные и партнерские фермы, готовые к стабильным долгосрочным программам с европейскими клиентами."
+                e1995: "Дедушка сажает первые коммерческие яблоневые сады и строит примитивное подземное холодильное хранилище примерно на 70 тонн фруктов.",
+                e2000: "Отец вместе с Дедушкой расширяет семейные сады. Приобретается и засаживается яблонями еще около 20 гектаров.",
+                e2003: "Поскольку спрос на упаковку растет, Отец запускает небольшое производство деревянных ящиков для яблок для производителей в регионе.",
+                e2008: "Семья строит первый в нашем селе холодильный склад на 1000 тонн и продолжает расширять яблоневые сады вокруг него. В пик сезона с нашего предприятия ежедневно уезжала как минимум одна полная фура.",
+                e2018: "Отец строит гораздо более эффективное и современное холодильное хранилище и начинает сажать сливы наряду с яблоками, диверсифицируя семейное производство.",
+                e2022: "Фруктовый бизнес в нашем районе приходит в упадок, так как основной рынок экспорта в Россию рушится. У многих местных производителей нет прямых контактов с европейскими покупателями, поэтому хорошие фрукты часто остаются на местных складах или продаются слишком дешево.",
+                today: "Молодое поколение, получившее образование в ЕС, берет на себя задачу открытия прямых путей к европейским покупателям. Под именем TARCOM LUX мы сейчас фокусируемся на честном, хорошо подготовленном экспорте яблок в Румынию и другие рынки ЕС."
             }
         },
 
