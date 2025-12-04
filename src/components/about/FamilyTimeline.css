@@ -16,7 +16,7 @@
     padding-bottom: 6rem;
 }
 
-/* Central vertical line - extends through entire timeline and fades at the end */
+/* Central vertical line - extends through entire timeline and fades after 2025 */
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -29,12 +29,29 @@
             var(--color-primary) 0%,
             var(--color-accent) 85%,
             transparent 100%);
+    z-index: 0;
+}
+
+/* Mask to hide the line above the first icon on desktop */
+.timeline-item:first-child::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: calc(50% - 2rem);
+    /* Stop at the top of the icon (icon is 4rem, center is 50%) */
+    width: 10px;
+    background-color: var(--color-bg-white);
+    z-index: 1;
 }
 
 .timeline-item {
     display: flex;
     margin-bottom: 3rem;
     position: relative;
+    z-index: 2;
+    /* Ensure items are above the line */
 }
 
 /* Left-aligned items */
@@ -71,7 +88,7 @@
     transform: translateY(-50%);
 }
 
-/* Center-aligned final item */
+/* Center-aligned final item (2025) */
 .timeline-item.center {
     flex-direction: column;
     align-items: center;
@@ -154,61 +171,65 @@
     margin: 0;
 }
 
-/* Mobile responsive - unified centered vertical timeline */
+/* Mobile responsive */
 @media (max-width: 768px) {
-    .timeline-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .timeline-container::before {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 2rem;
         bottom: -3rem;
+        top: 4rem;
+        /* Start from bottom of first icon */
     }
 
-    /* All items use the same centered vertical layout */
+    /* Remove mask on mobile */
+    .timeline-item:first-child::before {
+        display: none;
+    }
+
     .timeline-item.left,
-    .timeline-item.right,
-    .timeline-item.center {
+    .timeline-item.right {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        padding-left: 0;
+        padding-left: 5rem;
         padding-right: 0;
-        margin-bottom: 3.5rem;
+        margin-bottom: 4rem;
+        /* More space between items */
     }
 
-    /* Year badges - always centered at top */
-    .timeline-item.left .timeline-year,
-    .timeline-item.right .timeline-year,
-    .timeline-item.center .timeline-year {
-        position: static;
-        transform: none;
-        margin-bottom: 1rem;
-        margin-top: 0;
-        font-size: 1.5rem;
-    }
-
-    /* Icons - centered below year badge */
-    .timeline-item.left .timeline-icon-wrapper,
-    .timeline-item.right .timeline-icon-wrapper,
-    .timeline-item.center .timeline-icon-wrapper {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Content cards - full width below icon */
     .timeline-item.left .timeline-content,
-    .timeline-item.right .timeline-content,
-    .timeline-item.center .timeline-content {
+    .timeline-item.right .timeline-content {
         text-align: left;
         border-left: 4px solid var(--color-primary);
         border-right: none;
         width: 100%;
-        max-width: 500px;
+        /* Full width */
+    }
+
+    /* Position year badge above the card */
+    .timeline-item.left .timeline-year,
+    .timeline-item.right .timeline-year {
+        position: static;
+        /* Remove absolute positioning */
+        transform: none;
+        margin-bottom: 1rem;
+        /* Space between year and card */
+        align-self: flex-start;
+        /* Align with start of content */
+        margin-left: 0;
+    }
+
+    .timeline-icon-wrapper {
+        left: 2rem;
+        transform: translate(-50%, -50%);
+        top: 2rem;
+        /* Align icon with the top area (year) */
+    }
+
+    .timeline-item.center {
+        padding-left: 2rem;
+    }
+
+    .timeline-item.center .timeline-year {
+        font-size: 2rem;
     }
 }
