@@ -166,7 +166,7 @@ const translations = {
             title: "About us & our history",
             subtitle: "TARCOM LUX is the export name connecting several family and partner farms in one village in northern Moldova. Our story starts with a grandfather who planted the first apple gardens here in the mid-1990s, long before anyone thought about the EU as a destination.",
             personalTitle: "Who you are talking to",
-            personalText: "We mainly communicate through the younger generationeducated in the EU in economics and marketing, fluent in English and Russian, and conversational in Romanian. We work closely with partners in Europe, mainly Romania and Germany. Our focus is on Moldova's fruits: first-class apples and seasonally available plums, pears and other produce when quality and logistics align."
+            personalText: "You will mainly get in touch with the younger generation, educated in the EU in economics and marketing, fluent in English and Russian and conversational in Romanian. We are actively working to build long-term relationships with European partners — especially in Romania and Germany — based on steady programs and shared growth."
         },
 
         // Family Timeline
@@ -411,7 +411,7 @@ const translations = {
             title: "Despre noi și istoria noastră",
             subtitle: "TARCOM LUX este numele de export care conectează mai multe ferme de familie și partenere dintr-un sat din nordul Moldovei. Povestea noastră începe cu un bunic care a plantat primele livezi de mere aici la mijlocul anilor '90, cu mult înainte ca cineva să se gândească la UE ca destinație.",
             personalTitle: "Cu cine discutați",
-            personalText: "Comunicăm în principal prin tânăra generație, educată în UE în economie și marketing, vorbitori fluenți de engleză și rusă și la nivel conversațional în română. Lucrăm îndeaproape cu parteneri din Europa, în principal România și Germania. Ne concentrăm pe fructele Moldovei: mere de primă clasă și produse sezoniere disponibile precum prune, pere și alte produse când calitatea și logistica se aliniază."
+            personalText: "Veți intra în legătură în principal cu tânăra generație, educată în UE în economie și marketing, vorbitori fluenți de engleză și rusă și la nivel conversațional în română. Lucrăm activ pentru a construi relații pe termen lung cu parteneri europeni — în special în România și Germania — bazate pe programe stabile și creștere comună."
         },
 
         // Family Timeline
@@ -656,7 +656,7 @@ const translations = {
             title: "О нас и наша история",
             subtitle: "TARCOM LUX — это экспортное название, объединяющее несколько семейных и партнерских ферм в одной деревне на севере Молдовы. Наша история начинается с дедушки, который посадил первые яблоневые сады здесь в середине 90-х, задолго до того, как кто-то думал о ЕС как о направлении.",
             personalTitle: "С кем вы говорите",
-            personalText: "Мы в основном общаемся через молодое поколение, получившее образование в ЕС по экономике и маркетингу, свободно владеющее английским и русским языками и базово румынским. Мы тесно работаем с партнерами в Европе, в основном в Румынии и Германии. Мы фокусируемся на фруктах Молдовы: яблоках первого класса и сезонно доступных сливах, грушах и других продуктах, когда качество и логистика совпадают."
+            personalText: "Вы в основном будете общаться с молодым поколением, получившим образование в ЕС по экономике и маркетингу, свободно владеющим английским и русским языками и разговаривающим на румынском. Мы активно работаем над построением долгосрочных отношений с европейскими партнерами — особенно в Румынии и Германии — основанных на стабильных программах и совместном росте."
         },
 
         // Family Timeline
