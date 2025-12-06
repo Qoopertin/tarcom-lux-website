@@ -29,7 +29,7 @@ const Navbar = () => {
     // Close mobile menu on route change
     useEffect(() => {
         setIsMobileMenuOpen(false);
-    }, [location]);
+    }, [location.pathname]);
 
     const { t } = useLanguage();
 

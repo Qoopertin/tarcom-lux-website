@@ -1,3 +1,22 @@
+import React from 'react';
+import { Leaf, Snowflake, Search, Package, Truck } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
+import './FromOrchardToTruck.css';
+
+// eslint-disable-next-line no-unused-vars
+const Step = ({ number, icon: Icon, title, text, position }) => (
+    <div className={`process-step ${position}`}>
+        <div className="step-content">
+            <h3>{title}</h3>
+            <p>{text}</p>
+        </div>
+        <div className="step-icon-wrapper">
+            <Icon size={24} className="step-icon" />
+            <span className="step-number">{number}</span>
+        </div>
+    </div>
+);
+
 const FromOrchardToTruck = () => {
     const { t } = useLanguage();
 
