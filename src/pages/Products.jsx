@@ -4,8 +4,13 @@ import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import './Products.css';
 
-const ProductCard = ({ title, description }) => (
+import ImageCarousel from '../components/ImageCarousel';
+
+const ProductCard = ({ title, description, images }) => (
     <div className="product-card">
+        {images && images.length > 0 && (
+            <ImageCarousel images={images} alt={title} />
+        )}
         <div className="product-info">
             <h3>{title}</h3>
             <p>{description}</p>
@@ -71,7 +76,12 @@ const Products = () => {
         },
         {
             title: t('products.varieties.redChief.name'),
-            description: t('products.varieties.redChief.description')
+            description: t('products.varieties.redChief.description'),
+            images: [
+                '/images/red-chief/1.jpg',
+                '/images/red-chief/2.jpg',
+                '/images/red-chief/3.jpg'
+            ]
         },
         {
             title: t('products.varieties.florina.name'),

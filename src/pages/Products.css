@@ -102,16 +102,21 @@
 
 .product-card {
     background: white;
-    padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     border: 1px solid #eee;
+    overflow: hidden;
+    /* Ensure images stay within rounded corners */
 }
 
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    padding: 2rem;
 }
 
 .product-info h3 {
