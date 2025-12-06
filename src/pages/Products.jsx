@@ -142,6 +142,32 @@ const Products = () => {
         navigate(`#${categoryId}`, { replace: true });
     };
 
+    const berries = [
+        {
+            title: t('products.details.berries.raspberry.name'),
+            description: t('products.details.berries.raspberry.description'),
+            images: [
+                '/images/raspberry/1.jpg',
+                '/images/raspberry/2.jpg'
+            ]
+        },
+        {
+            title: t('products.details.berries.cherry.name'),
+            description: t('products.details.berries.cherry.description'),
+            images: [
+                '/images/cherry/1.jpg',
+                '/images/cherry/2.jpg'
+            ]
+        },
+        {
+            title: t('products.details.berries.blackberry.name'),
+            description: t('products.details.berries.blackberry.description'),
+            images: [
+                '/images/blackberry/1.jpg'
+            ]
+        }
+    ];
+
     return (
         <div className="products-page">
             <div className="page-header">
@@ -208,11 +234,16 @@ const Products = () => {
                     )}
 
                     {selectedCategory === 'raspberries' && (
-                        <div id="raspberries-details" className="category-details text-center">
-                            <h2 className="details-title">{t('products.details.raspberries.title')}</h2>
-                            <p className="details-text max-w-3xl mx-auto">
-                                {t('products.details.raspberries.text')}
+                        <div id="raspberries-details" className="category-details">
+                            <h2 className="details-title text-center mb-8">{t('products.details.berries.title')}</h2>
+                            <p className="details-text max-w-3xl mx-auto text-center mb-12">
+                                {t('products.details.berries.text')}
                             </p>
+                            <div className="products-grid">
+                                {berries.map((berry, index) => (
+                                    <ProductCard key={index} {...berry} />
+                                ))}
+                            </div>
                         </div>
                     )}
                 </div>
