@@ -85,6 +85,22 @@ const Products = () => {
             ]
         },
         {
+            title: t('products.varieties.redDelicious.name'),
+            description: t('products.varieties.redDelicious.description'),
+            images: [
+                '/images/red-delicious/1.jpg',
+                '/images/red-delicious/2.jpg'
+            ]
+        },
+        {
+            title: t('products.varieties.jonagold.name'),
+            description: t('products.varieties.jonagold.description'),
+            images: [
+                '/images/jonagold/1.jpg',
+                '/images/jonagold/2.jpg'
+            ]
+        },
+        {
             title: t('products.varieties.florina.name'),
             description: t('products.varieties.florina.description'),
             images: [
@@ -170,6 +186,12 @@ const Products = () => {
                     {selectedCategory === 'plums' && (
                         <div id="plums-details" className="category-details text-center">
                             <h2 className="details-title">{t('products.details.plums.title')}</h2>
+                            <div className="max-w-3xl mx-auto mb-8">
+                                <ImageCarousel
+                                    images={['/images/plums-gallery/1.jpg']}
+                                    alt={t('products.details.plums.title')}
+                                />
+                            </div>
                             <p className="details-text max-w-3xl mx-auto">
                                 {t('products.details.plums.text')}
                             </p>
