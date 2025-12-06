@@ -515,9 +515,21 @@ const translations = {
                     title: "Pere",
                     text: "Pere proaspete și suculente sunt disponibile sezonier prin parteneri locali de încredere și pot fi pregătite gata pentru export la cerere ca parte a programului dumneavoastră."
                 },
-                raspberries: {
+                berries: {
                     title: "Zmeură și altele",
-                    text: "Pocrovca este considerată un paradis al zmeurei în Moldova. Putem aproviziona sezonier zmeură și, la cerere, alte produse precum căpșuni și legume de la cultivatori din apropiere, în principal ca completări la programele existente de mere."
+                    text: "Pocrovca este considerată un paradis al zmeurei în Moldova. Putem aproviziona sezonier zmeură și, la cerere, alte produse precum căpșuni și legume de la cultivatori din apropiere.",
+                    raspberry: {
+                        name: "Zmeură",
+                        description: "Disponibilă proaspătă în cutii sau congelată pentru uz industrial. Provenită din producția locală masivă din Pocrovca."
+                    },
+                    cherry: {
+                        name: "Cireșe",
+                        description: "Cireșe dulci și negre din regiunea noastră. Recoltate la maturitate deplină pentru cea mai bună aromă."
+                    },
+                    blackberry: {
+                        name: "Mure",
+                        description: "Mure mari și suculente cultivate de parteneri locali. Disponibile sezonier."
+                    }
                 }
             }
         },
@@ -779,9 +791,21 @@ const translations = {
                     title: "Груши",
                     text: "Свежие, сочные груши доступны сезонно через надежных местных партнеров и могут быть подготовлены к экспорту по запросу как часть вашей программы."
                 },
-                raspberries: {
+                berries: {
                     title: "Малина и другое",
-                    text: "Покровка считается малинным раем в Молдове. Мы можем сезонно поставлять малину и, по запросу, другие продукты, такие как клубника и овощи, от ближайших производителей, в основном как дополнение к существующим яблочным программам."
+                    text: "Покровка считается малинным раем в Молдове. Мы можем сезонно поставлять малину и, по запросу, другие продукты, такие как клубника и овощи, от ближайших производителей.",
+                    raspberry: {
+                        name: "Малина",
+                        description: "Доступна свежая в ящиках или замороженная для промышленного использования. Построена на массовом местном производстве в Покровке."
+                    },
+                    cherry: {
+                        name: "Черешня",
+                        description: "Сладкая, темная черешня из нашего региона. Собранная на пике зрелости для лучшего вкуса."
+                    },
+                    blackberry: {
+                        name: "Ежевика",
+                        description: "Сочная, крупная ежевика, выращенная местными партнерами. Доступна сезонно."
+                    }
                 }
             }
         },
