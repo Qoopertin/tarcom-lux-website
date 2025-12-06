@@ -15,32 +15,7 @@
     }
 }
 
-@media (min-width: 1024px) {
-    .preview-grid {
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 items in a row for desktop */
-    }
-}
-
-.preview-card {
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.preview-card:hover {
-    transform: translateY(-5px);
-}
-
-.preview-img-container {
-    height: 200px;
-    /* Slightly shorter to fit 4 in a row better */
-    overflow: hidden;
-}
+@media (min-width: 1024px) {}
 
 .preview-img {
     width: 100%;

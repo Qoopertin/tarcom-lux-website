@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './ProductsPreview.css';
 
-const ProductCard = ({ image, title, description, link }) => (
-    <div className="preview-card">
-        <div className="preview-img-container">
-            <img src={image} alt={title} className="preview-img" />
+const ProductCard = ({ image, title, description, category }) => (
+    <Link to={`/products#${category}`} className="preview-card-link">
+        <div className="preview-card">
+            <div className="preview-img-container">
+                <img src={image} alt={title} className="preview-img" />
+            </div>
+            <div className="preview-content">
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
         </div>
-        <div className="preview-content">
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </div>
-    </div>
+    </Link>
 );
 
 const ProductsPreview = () => {
@@ -22,22 +24,26 @@ const ProductsPreview = () => {
         {
             title: t('productsPreview.apples.title'),
             description: t('productsPreview.apples.description'),
-            image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=1000&auto=format&fit=crop"
+            image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=1000&auto=format&fit=crop",
+            category: "apples"
         },
         {
             title: t('productsPreview.plums.title'),
             description: t('productsPreview.plums.description'),
-            image: "/images/plums.jpg"
+            image: "/images/plums.jpg",
+            category: "plums"
         },
         {
             title: t('productsPreview.pears.title'),
             description: t('productsPreview.pears.description'),
-            image: "/images/pears.jpg"
+            image: "/images/pears.jpg",
+            category: "pears"
         },
         {
             title: t('productsPreview.raspberries.title'),
             description: t('productsPreview.raspberries.description'),
-            image: "/images/raspberries.jpg"
+            image: "/images/raspberries.jpg",
+            category: "raspberries"
         }
     ];
 

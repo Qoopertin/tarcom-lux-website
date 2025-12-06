@@ -216,7 +216,26 @@ const translations = {
                 }
             },
             beyondTitle: "Beyond apples",
-            beyondText: "Seasonally, we may add limited volumes of plums and pears from our own and neighbouring gardens. The volumes here are smaller, so we treat them as an addition to apple programs rather than a separate large line."
+            categories: {
+                apples: "Apples",
+                plums: "Plums",
+                pears: "Pears",
+                raspberries: "Raspberries & More"
+            },
+            details: {
+                plums: {
+                    title: "Plums",
+                    text: "Seasonally we can add limited volumes of plums from our own and neighbouring gardens in northern Moldova. These are treated as an addition to apple programs rather than a separate large line."
+                },
+                pears: {
+                    title: "Pears",
+                    text: "Fresh, juicy pears are available seasonally through trusted local partners and can be prepared export-ready on request as part of your program."
+                },
+                raspberries: {
+                    title: "Raspberries & More",
+                    text: "Pocrovca is considered a raspberry paradise in Moldova. We can seasonally source raspberries and, on request, other produce such as strawberries and vegetables from nearby growers, mainly as additions to existing apple programs."
+                }
+            }
         },
 
         // Contact Page
@@ -461,7 +480,26 @@ const translations = {
                 }
             },
             beyondTitle: "Dincolo de mere",
-            beyondText: "Sezonier, putem adăuga volume limitate de prune și pere din livezile noastre proprii și învecinate. Volumele aici sunt mai mici, astfel încât le tratăm ca o adăugare la programele de mere mai degrabă decât o linie mare separată."
+            categories: {
+                apples: "Mere",
+                plums: "Prune",
+                pears: "Pere",
+                raspberries: "Zmeură și altele"
+            },
+            details: {
+                plums: {
+                    title: "Prune",
+                    text: "Sezonier putem adăuga volume limitate de prune din livezile noastre și cele învecinate din nordul Moldovei. Acestea sunt tratate ca o completare la programele de mere mai degrabă decât o linie mare separată."
+                },
+                pears: {
+                    title: "Pere",
+                    text: "Pere proaspete și suculente sunt disponibile sezonier prin parteneri locali de încredere și pot fi pregătite gata pentru export la cerere ca parte a programului dumneavoastră."
+                },
+                raspberries: {
+                    title: "Zmeură și altele",
+                    text: "Pocrovca este considerată un paradis al zmeurei în Moldova. Putem aproviziona sezonier zmeură și, la cerere, alte produse precum căpșuni și legume de la cultivatori din apropiere, în principal ca completări la programele existente de mere."
+                }
+            }
         },
 
         // Contact Page
@@ -706,7 +744,26 @@ const translations = {
                 }
             },
             beyondTitle: "Кроме яблок",
-            beyondText: "Сезонно мы можем добавлять ограниченные объемы слив и груш из наших собственных и соседних садов. Объемы здесь меньше, поэтому мы рассматриваем их как дополнение к яблочным программам, а не отдельную большую линию."
+            categories: {
+                apples: "Яблоки",
+                plums: "Сливы",
+                pears: "Груши",
+                raspberries: "Малина и другое"
+            },
+            details: {
+                plums: {
+                    title: "Сливы",
+                    text: "Сезонно мы можем добавлять ограниченные объемы слив из наших собственных и соседних садов на севере Молдовы. Мы рассматриваем их как дополнение к яблочным программам, а не как отдельную большую линию."
+                },
+                pears: {
+                    title: "Груши",
+                    text: "Свежие, сочные груши доступны сезонно через надежных местных партнеров и могут быть подготовлены к экспорту по запросу как часть вашей программы."
+                },
+                raspberries: {
+                    title: "Малина и другое",
+                    text: "Покровка считается малинным раем в Молдове. Мы можем сезонно поставлять малину и, по запросу, другие продукты, такие как клубника и овощи, от ближайших производителей, в основном как дополнение к существующим яблочным программам."
+                }
+            }
         },
 
         // Contact Page
