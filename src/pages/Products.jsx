@@ -63,18 +63,6 @@ const Products = () => {
 
     const apples = [
         {
-            title: t('products.varieties.gala.name'),
-            description: t('products.varieties.gala.description')
-        },
-        {
-            title: t('products.varieties.idared.name'),
-            description: t('products.varieties.idared.description')
-        },
-        {
-            title: t('products.varieties.golden.name'),
-            description: t('products.varieties.golden.description')
-        },
-        {
             title: t('products.varieties.redChief.name'),
             description: t('products.varieties.redChief.description'),
             images: [
@@ -85,11 +73,20 @@ const Products = () => {
         },
         {
             title: t('products.varieties.florina.name'),
-            description: t('products.varieties.florina.description')
+            description: t('products.varieties.florina.description'),
+            images: [
+                '/images/florina/1.jpg',
+                '/images/florina/2.jpg',
+                '/images/florina/3.jpg'
+            ]
         },
         {
-            title: t('products.varieties.other.name'),
-            description: t('products.varieties.other.description')
+            title: t('products.varieties.gala.name'),
+            description: t('products.varieties.gala.description'),
+            images: [
+                '/images/gala/1.jpg',
+                '/images/gala/2.jpg'
+            ]
         }
     ];
 
