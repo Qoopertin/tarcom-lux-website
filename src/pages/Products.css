@@ -2,13 +2,172 @@
     padding-top: 80px;
 }
 
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card.active {
+    border-color: #2c5530;
+    /* Primary Green */
+    background-color: #f9fff9;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(44, 85, 48, 0.15);
+}
+
+.category-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-img,
+.category-card.active .category-img {
+    transform: scale(1.05);
+}
+
+.category-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.category-content h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.category-card.active .category-content h3 {
+    color: #2c5530;
+}
+
+/* Category Details */
+.category-details {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.details-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.details-text {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.max-w-3xl {
+    max-width: 48rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Products Grid (reused for apple varieties) */
 .products-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-@media (min-width: 768px) {
-    color: var(--color-text-muted);
+.product-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.product-info p {
+    color: #666;
     line-height: 1.6;
+}
+
+.beyond-apples {
+    background-color: #f9f9f9;
+}
+
+.beyond-content h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.beyond-content p {
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+        /* Stack visually on mobile */
+        gap: 1.5rem;
+    }
+
+    .category-img-container {
+        height: 180px;
+    }
+
+    .details-title {
+        font-size: 1.75rem;
+    }
 }

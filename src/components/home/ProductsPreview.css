@@ -11,11 +11,42 @@
 @media (min-width: 768px) {
     .preview-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Changed to 2 columns to accommodate 4 items nicely, or we can keep 3 and have one wrap */
     }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .preview-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.preview-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.preview-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.preview-img-container {
+    height: 200px;
+    overflow: hidden;
+}
 
 .preview-img {
     width: 100%;
