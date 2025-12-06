@@ -1,6 +1,3 @@
-import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import './Products.css';
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
