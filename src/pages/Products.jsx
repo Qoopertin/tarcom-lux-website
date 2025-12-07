@@ -1,15 +1,16 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import './Products.css';
 
 import ImageCarousel from '../components/ImageCarousel';
+import ImageLightbox from '../components/ImageLightbox';
 
-const ProductCard = ({ title, description, images }) => (
+const ProductCard = ({ title, description, images, onImageClick }) => (
     <div className="product-card">
         {images && images.length > 0 && (
-            <ImageCarousel images={images} alt={title} />
+            <ImageCarousel images={images} alt={title} onImageClick={onImageClick} />
         )}
         <div className="product-info">
             <h3>{title}</h3>
@@ -37,6 +38,7 @@ const Products = () => {
     const { t } = useLanguage();
     const location = useLocation();
     const navigate = useNavigate();
+    const [lightboxImage, setLightboxImage] = useState(null);
 
     // Derive selected category directly from URL hash, default to 'apples'
     const getCategoryFromHash = () => {
@@ -46,10 +48,11 @@ const Products = () => {
                 return category;
             }
         }
-        return 'apples';
+        return null; // Return null when no category is selected
     };
 
     const selectedCategory = getCategoryFromHash();
+    const hasCategorySelected = selectedCategory !== null;
 
     const categories = [
         {
@@ -179,21 +182,23 @@ const Products = () => {
                 </div>
             </div>
 
-            {/* LEVEL 1: Category Cards */}
-            <section id="products-categories" className="categories-section section-padding">
-                <div className="container">
-                    <div className="categories-grid">
-                        {categories.map((category) => (
-                            <CategoryCard
-                                key={category.id}
-                                {...category}
-                                isActive={selectedCategory === category.id}
-                                onClick={() => handleCategoryClick(category.id)}
-                            />
-                        ))}
+            {/* LEVEL 1: Category Cards - Only show when no category is selected */}
+            {!hasCategorySelected && (
+                <section id="products-categories" className="categories-section section-padding">
+                    <div className="container">
+                        <div className="categories-grid">
+                            {categories.map((category) => (
+                                <CategoryCard
+                                    key={category.id}
+                                    {...category}
+                                    isActive={selectedCategory === category.id}
+                                    onClick={() => handleCategoryClick(category.id)}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            )}
 
             {/* LEVEL 2: Detail Area */}
             <section className="product-details-section section-padding bg-light">
@@ -203,7 +208,7 @@ const Products = () => {
                             <h2 className="details-title">{t('products.varietiesTitle')}</h2>
                             <div className="products-grid">
                                 {apples.map((apple, index) => (
-                                    <ProductCard key={index} {...apple} />
+                                    <ProductCard key={index} {...apple} onImageClick={setLightboxImage} />
                                 ))}
                             </div>
                         </div>
@@ -216,6 +221,7 @@ const Products = () => {
                                 <ImageCarousel
                                     images={['/images/plums-gallery/1.jpg']}
                                     alt={t('products.details.plums.title')}
+                                    onImageClick={setLightboxImage}
                                 />
                             </div>
                             <p className="details-text max-w-3xl mx-auto">
@@ -241,13 +247,22 @@ const Products = () => {
                             </p>
                             <div className="products-grid">
                                 {berries.map((berry, index) => (
-                                    <ProductCard key={index} {...berry} />
+                                    <ProductCard key={index} {...berry} onImageClick={setLightboxImage} />
                                 ))}
                             </div>
                         </div>
                     )}
                 </div>
             </section>
+
+            {/* Image Lightbox */}
+            {lightboxImage && (
+                <ImageLightbox
+                    image={lightboxImage}
+                    alt={selectedCategory || 'Product'}
+                    onClose={() => setLightboxImage(null)}
+                />
+            )}
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './ImageCarousel.css';
 
-const ImageCarousel = ({ images, alt }) => {
+const ImageCarousel = ({ images, alt, onImageClick }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
@@ -55,7 +55,12 @@ const ImageCarousel = ({ images, alt }) => {
             >
                 {images.map((img, index) => (
                     <div className="carousel-slide" key={index}>
-                        <img src={img} alt={`${alt} - ${index + 1}`} />
+                        <img
+                            src={img}
+                            alt={`${alt} - ${index + 1}`}
+                            onClick={() => onImageClick && onImageClick(img)}
+                            style={{ cursor: onImageClick ? 'pointer' : 'default' }}
+                        />
                     </div>
                 ))}
             </div>
