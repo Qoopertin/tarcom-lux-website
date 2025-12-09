@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <h3>TARCOM LUX</h3>
+                        <h3>FRIGO-TERM</h3>
                         <p>{t('footer.description')}</p>
                     </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} TARCOM LUX. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} FRIGO-TERM. All rights reserved.</p>
                 </div>
             </div>
         </footer>

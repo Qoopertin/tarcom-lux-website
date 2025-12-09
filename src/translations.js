@@ -18,7 +18,7 @@ const translations = {
         // Who We Are
         whoWeAre: {
             title: "Who we are",
-            p1: "TARCOM LUX is the export face of a family group of apple gardens and cold stores in northern Moldova. Our grandfather started planting apples here in the mid-1990s, later joined by our parents and a trusted local partner. Together, we look after around 150 hectares of gardens and over 1,500 tons of cold storage capacity, all within the same local area.",
+            p1: "FRIGO-TERM is the export face of a family group of apple gardens and cold stores in northern Moldova. Our grandfather started planting apples here in the mid-1990s, later joined by our parents and a trusted local partner. Together, we look after around 150 hectares of gardens and over 1,500 tons of cold storage capacity, all within the same local area.",
             p2: "For many years almost all volumes went to Russia. When that market closed, our region was left with good apples and no direct route into Europe. We are now changing that – step by step – by building simple, transparent relationships with European importers, mainly Romanian and German.",
             p3: "You will mostly be in touch with the younger generation, educated in the EU in economics and marketing, fluent in English and Russian and conversational in Romanian.",
             history: "Explore our history →"
@@ -164,7 +164,7 @@ const translations = {
         // About Page
         about: {
             title: "About us & our history",
-            subtitle: "TARCOM LUX is the export name connecting several family and partner farms in one village in northern Moldova. Our story starts with a grandfather who planted the first apple gardens here in the mid-1990s, long before anyone thought about the EU as a destination.",
+            subtitle: "FRIGO-TERM is the export name connecting several family and partner farms in one village in northern Moldova. Our story starts with a grandfather who planted the first apple gardens here in the mid-1990s, long before anyone thought about the EU as a destination.",
             personalTitle: "Who you are talking to",
             personalText: "You will mainly get in touch with the younger generation, educated in the EU in economics and marketing, fluent in English and Russian and conversational in Romanian. We are actively working to build long-term relationships with European partners — especially in Romania and Germany."
         },
@@ -180,7 +180,7 @@ const translations = {
                 e2008: "The family builds the first 1,000-ton cold store in our village and continues to expand the apple gardens around it. At peak season, at least one full truck was leaving our facility every day.",
                 e2018: "Father builds a much more efficient and modern refrigerated storage facility and starts planting plums alongside apples, diversifying the family production.",
                 e2022: "The fruit business in our area declines as the main export market to Russia collapses. Many local growers have no direct contacts with European buyers, so good fruit often stays in local storage or is sold too cheaply.",
-                today: "A younger generation educated in the EU takes over the task of opening direct routes to European buyers. Under the TARCOM LUX name we are now focusing on honest, well-prepared apple exports to Romania and other EU markets."
+                today: "A younger generation educated in the EU takes over the task of opening direct routes to European buyers. Under the FRIGO-TERM name we are now focusing on honest, well-prepared apple exports to Romania and other EU markets."
             }
         },
 
@@ -302,7 +302,7 @@ const translations = {
         // Who We Are
         whoWeAre: {
             title: "Cine suntem",
-            p1: "TARCOM LUX este fața de export a unui grup familial de livezi de mere și depozite frigorifice din nordul Moldovei. Bunicul nostru a început să planteze meri aici la mijlocul anilor '90, mai târziu alăturându-i-se părinții noștri și un partener local de încredere. Împreună ne ocupăm de aproximativ 150 de hectare de livezi și peste 1.500 de tone de capacitate frigorifică, toate în aceeași zonă.",
+            p1: "FRIGO-TERM este fața de export a unui grup familial de livezi de mere și depozite frigorifice din nordul Moldovei. Bunicul nostru a început să planteze meri aici la mijlocul anilor '90, mai târziu alăturându-i-se părinții noștri și un partener local de încredere. Împreună ne ocupăm de aproximativ 150 de hectare de livezi și peste 1.500 de tone de capacitate frigorifică, toate în aceeași zonă.",
             p2: "Mulți ani aproape toate volumele au fost către Rusia. Când acea piață s-a închis, regiunea noastră a rămas cu mere bune și fără rută directă către Europa. Acum schimbăm asta – pas cu pas – prin construirea de relații simple și transparente cu importatori europeni, în principal din România și Germania.",
             p3: "Veți fi în legătură în principal cu tânăra generație, educată în UE în economie și marketing, vorbitori fluenți de engleză și rusă și la nivel conversațional în română.",
             history: "Explorați istoria noastră →"
@@ -448,7 +448,7 @@ const translations = {
         // About Page
         about: {
             title: "Despre noi și istoria noastră",
-            subtitle: "TARCOM LUX este numele de export care conectează mai multe ferme de familie și partenere dintr-un sat din nordul Moldovei. Povestea noastră începe cu un bunic care a plantat primele livezi de mere aici la mijlocul anilor '90, cu mult înainte ca cineva să se gândească la UE ca destinație.",
+            subtitle: "FRIGO-TERM este numele de export care conectează mai multe ferme de familie și partenere dintr-un sat din nordul Moldovei. Povestea noastră începe cu un bunic care a plantat primele livezi de mere aici la mijlocul anilor '90, cu mult înainte ca cineva să se gândească la UE ca destinație.",
             personalTitle: "Cu cine discutați",
             personalText: "Veți intra în legătură în principal cu tânăra generație, educată în UE în economie și marketing, vorbitori fluenți de engleză și rusă și la nivel conversațional în română. Lucrăm activ pentru a construi relații pe termen lung cu parteneri europeni — în special în România și Germania."
         },
@@ -464,7 +464,7 @@ const translations = {
                 e2008: "Familia construiește primul depozit frigorific de 1.000 de tone din satul nostru și continuă să extindă livezile de mere din jurul acestuia. În sezonul de vârf, cel puțin un camion plin pleca de la unitatea noastră în fiecare zi.",
                 e2018: "Tatăl construiește un depozit frigorific mult mai eficient și modern și începe să planteze prune alături de mere, diversificând producția familiei.",
                 e2022: "Afacerea cu fructe din zona noastră scade pe măsură ce principala piață de export către Rusia se prăbușește. Mulți cultivatori locali nu au contacte directe cu cumpărătorii europeni, așa că fructele bune rămân adesea în depozitele locale sau sunt vândute prea ieftin.",
-                today: "O generație mai tânără, educată în UE, preia sarcina de a deschide rute directe către cumpărătorii europeni. Sub numele TARCOM LUX ne concentrăm acum pe exporturi oneste și bine pregătite de mere către România și alte piețe din UE."
+                today: "O generație mai tânără, educată în UE, preia sarcina de a deschide rute directe către cumpărătorii europeni. Sub numele FRIGO-TERM ne concentrăm acum pe exporturi oneste și bine pregătite de mere către România și alte piețe din UE."
             }
         },
 
@@ -578,7 +578,7 @@ const translations = {
         // Who We Are
         whoWeAre: {
             title: "Кто мы",
-            p1: "TARCOM LUX — это экспортное лицо семейной группы яблоневых садов и холодильных складов на севере Молдовы. Наш дедушка начал выращивать яблоки здесь в середине 90-х, позже к нему присоединились наши родители и надежный местный партнер. Вместе мы ухаживаем примерно за 150 гектарами садов и более 1500 тоннами холодильных мощностей, все в одном районе.",
+            p1: "FRIGO-TERM — это экспортное лицо семейной группы яблоневых садов и холодильных складов на севере Молдовы. Наш дедушка начал выращивать яблоки здесь в середине 90-х, позже к нему присоединились наши родители и надежный местный партнер. Вместе мы ухаживаем примерно за 150 гектарами садов и более 1500 тоннами холодильных мощностей, все в одном районе.",
             p2: "Много лет почти все объемы шли в Россию. Когда этот рынок закрылся, наш регион остался с хорошими яблоками и без прямого пути в Европу. Сейчас мы меняем это — шаг за шагом — выстраивая простые, прозрачные отношения с европейскими импортерами, в основном румынскими и немецкими.",
             p3: "В основном вы будете общаться с молодым поколением, получившим образование в ЕС по экономике и маркетингу, свободно владеющим английским и русским языками и базово румынским.",
             history: "Узнайте нашу историю →"
@@ -724,7 +724,7 @@ const translations = {
         // About Page
         about: {
             title: "О нас и наша история",
-            subtitle: "TARCOM LUX — это экспортное название, объединяющее несколько семейных и партнерских ферм в одной деревне на севере Молдовы. Наша история начинается с дедушки, который посадил первые яблоневые сады здесь в середине 90-х, задолго до того, как кто-то думал о ЕС как о направлении.",
+            subtitle: "FRIGO-TERM — это экспортное название, объединяющее несколько семейных и партнерских ферм в одной деревне на севере Молдовы. Наша история начинается с дедушки, который посадил первые яблоневые сады здесь в середине 90-х, задолго до того, как кто-то думал о ЕС как о направлении.",
             personalTitle: "С кем вы говорите",
             personalText: "Вы в основном будете общаться с молодым поколением, получившим образование в ЕС по экономике и маркетингу, свободно владеющим английским и русским языками и разговаривающим на румынском. Мы активно работаем над построением долгосрочных отношений с европейскими партнерами — особенно в Румынии и Германии."
         },
@@ -740,7 +740,7 @@ const translations = {
                 e2008: "Семья строит первый в нашем селе холодильный склад на 1000 тонн и продолжает расширять яблоневые сады вокруг него. В пик сезона с нашего предприятия ежедневно уезжала как минимум одна полная фура.",
                 e2018: "Отец строит гораздо более эффективное и современное холодильное хранилище и начинает сажать сливы наряду с яблоками, диверсифицируя семейное производство.",
                 e2022: "Фруктовый бизнес в нашем районе приходит в упадок, так как основной рынок экспорта в Россию рушится. У многих местных производителей нет прямых контактов с европейскими покупателями, поэтому хорошие фрукты часто остаются на местных складах или продаются слишком дешево.",
-                today: "Молодое поколение, получившее образование в ЕС, берет на себя задачу открытия прямых путей к европейским покупателям. Под именем TARCOM LUX мы сейчас фокусируемся на честном, хорошо подготовленном экспорте яблок в Румынию и другие рынки ЕС."
+                today: "Молодое поколение, получившее образование в ЕС, берет на себя задачу открытия прямых путей к европейским покупателям. Под именем FRIGO-TERM мы сейчас фокусируемся на честном, хорошо подготовленном экспорте яблок в Румынию и другие рынки ЕС."
             }
         },
 

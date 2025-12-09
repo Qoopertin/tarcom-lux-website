@@ -46,7 +46,7 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
                 <Link to="/" className="logo">
-                    TARCOM LUX
+                    FRIGO-TERM
                 </Link>
 
                 {/* Desktop Menu */}
