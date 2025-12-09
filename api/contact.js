@@ -45,7 +45,7 @@ export default async function handler(req, res) {
     try {
         await transporter.sendMail({
             from: `"FRIGO-TERM Website" <${process.env.EMAIL_USER}>`, // Must match authenticated user
-            to: 'info@frigo-term.com', // Cloudflare will forward this to your Gmail
+            to: process.env.EMAIL_USER, // Send directly to Gmail (danil1390@gmail.com)
             replyTo: email, // Reply directly to the client
             subject: `New message from FRIGO-TERM website - ${name}`,
             text: `
