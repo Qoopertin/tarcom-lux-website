@@ -1,3 +1,15 @@
+/**
+ * Contact Form Email Handler (Vercel Serverless Function)
+ * 
+ * Uses Gmail SMTP to send contact form submissions.
+ * 
+ * Required Vercel Environment Variables:
+ * - EMAIL_USER: Gmail address (e.g., daniil390@gmail.com)
+ * - EMAIL_PASS: 16-character Gmail App Password (not regular password)
+ * 
+ * Generate App Password at: https://myaccount.google.com/apppasswords
+ */
+
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method Not Allowed' });
@@ -32,10 +44,10 @@ export default async function handler(req, res) {
 
     try {
         await transporter.sendMail({
-            from: `"Website Contact Form" <${process.env.EMAIL_USER}>`, // Must match authenticated user
-            to: 'info@frigo-term.com', // Cloudflare will forward this to gworkgw@gmail.com
+            from: `"FRIGO-TERM Website" <${process.env.EMAIL_USER}>`, // Must match authenticated user
+            to: 'info@frigo-term.com', // Cloudflare will forward this to your Gmail
             replyTo: email, // Reply directly to the client
-            subject: `New Contact Form: ${name}`,
+            subject: `New message from FRIGO-TERM website - ${name}`,
             text: `
 Name: ${name}
 Email: ${email}
