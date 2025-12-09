@@ -9,7 +9,8 @@ const ImageLightbox = ({ images, initialIndex = 0, alt, onClose }) => {
     const [isSwiping, setIsSwiping] = useState(false);
 
     const minSwipeDistance = 50;
-    const swipeThreshold = 10;
+    const swipeThreshold = 15; // Increased for more tolerance
+    const horizontalBias = 1.3; // Horizontal must be 30% greater than vertical
 
     // Handle single image (backward compatibility)
     const imageArray = Array.isArray(images) ? images : [images];
@@ -61,7 +62,8 @@ const ImageLightbox = ({ images, initialIndex = 0, alt, onClose }) => {
         const diffY = Math.abs(touchStartY - currentY);
 
         if (!isSwiping && (diffX > swipeThreshold || diffY > swipeThreshold)) {
-            if (diffX > diffY) {
+            // Horizontal swipe requires movement to be 30% greater than vertical
+            if (diffX > diffY * horizontalBias) {
                 setIsSwiping(true);
                 e.preventDefault();
             }

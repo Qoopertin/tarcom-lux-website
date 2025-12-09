@@ -10,7 +10,8 @@ const ImageCarousel = ({ images, alt, onImageClick }) => {
     const carouselRef = useRef(null);
 
     const minSwipeDistance = 50;
-    const swipeThreshold = 10; // Threshold to determine swipe direction
+    const swipeThreshold = 15; // Increased from 10 for more tolerance
+    const horizontalBias = 1.3; // Horizontal movement must be 30% greater than vertical
 
     const onTouchStart = (e) => {
         setTouchStart(e.targetTouches[0].clientX);
@@ -28,9 +29,10 @@ const ImageCarousel = ({ images, alt, onImageClick }) => {
         const diffY = Math.abs(touchStartY - currentY);
 
         // Determine if this is a horizontal or vertical swipe
+        // Horizontal swipe requires movement to be significantly more horizontal than vertical
         if (!isSwiping && (diffX > swipeThreshold || diffY > swipeThreshold)) {
-            // If horizontal movement is greater, it's a horizontal swipe
-            if (diffX > diffY) {
+            // If horizontal movement is 30% greater than vertical, it's a horizontal swipe
+            if (diffX > diffY * horizontalBias) {
                 setIsSwiping(true);
                 // Prevent page scroll for horizontal swipes
                 e.preventDefault();
