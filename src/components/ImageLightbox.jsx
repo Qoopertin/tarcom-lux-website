@@ -9,7 +9,6 @@ const ImageLightbox = ({ images, initialIndex = 0, alt, onClose }) => {
     const [isSwiping, setIsSwiping] = useState(false);
 
     const minSwipeDistance = 50;
-    const verticalScrollThreshold = window.innerHeight * 0.15; // 15% of screen height
 
     // Handle single image (backward compatibility)
     const imageArray = Array.isArray(images) ? images : [images];
@@ -60,22 +59,17 @@ const ImageLightbox = ({ images, initialIndex = 0, alt, onClose }) => {
         const diffX = Math.abs(touchStart - currentX);
         const diffY = Math.abs(touchStartY - currentY);
 
+        // In fullscreen mode, only allow horizontal swipes for navigation
+        // Prevent all vertical scrolling (body overflow is already hidden)
         if (!isSwiping) {
-            // If vertical movement exceeds 15% of screen height, allow vertical scroll
-            if (diffY > verticalScrollThreshold) {
-                return;
-            }
-
-            // Otherwise, if there's any horizontal movement, treat as horizontal swipe
-            if (diffX > 20) {
+            // Detect primarily horizontal movement
+            if (diffX > 20 && diffX > diffY) {
                 setIsSwiping(true);
-                e.preventDefault();
             }
         }
 
-        if (isSwiping) {
-            e.preventDefault();
-        }
+        // Always prevent default in lightbox to block any page movement
+        e.preventDefault();
     };
 
     const onTouchEnd = (e) => {

@@ -10,7 +10,7 @@ const ImageCarousel = ({ images, alt, onImageClick }) => {
     const carouselRef = useRef(null);
 
     const minSwipeDistance = 50;
-    const verticalScrollThreshold = window.innerHeight * 0.15; // 15% of screen height
+    const verticalScrollThreshold = window.innerHeight * 0.10; // 10% of screen height
 
     const onTouchStart = (e) => {
         setTouchStart(e.targetTouches[0].clientX);
