@@ -70,6 +70,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .input-icon {
@@ -83,14 +84,15 @@
 }
 
 .input-icon.textarea-icon {
-    top: 1.25rem;
+    top: 1.5rem;
     transform: none;
 }
 
 .input-wrapper input,
 .input-wrapper textarea {
     width: 100%;
-    padding: 1rem 1.25rem 1rem 3.25rem;
+    padding: 1rem 1.25rem 1rem 3.75rem;
+    /* Increased to 60px */
     border: 2px solid #E5E7EB;
     border-radius: 1rem;
     font-family: inherit;
@@ -100,13 +102,15 @@
     transition: all 0.3s ease;
 }
 
+/* Fix focusing ring overlap */
 .input-wrapper input:focus,
 .input-wrapper textarea:focus {
     outline: none;
     border-color: #fbbf24;
     background-color: white;
     box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.1);
-    transform: translateY(-1px);
+    transform: translateY(0);
+    /* Removed negative transform to prevent potential layout shifts */
 }
 
 .input-wrapper input::placeholder,
@@ -117,7 +121,6 @@
 .input-wrapper textarea {
     resize: vertical;
     min-height: 140px;
-    padding-top: 1rem;
 }
 
 .submit-btn {
