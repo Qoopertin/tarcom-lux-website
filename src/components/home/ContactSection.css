@@ -61,9 +61,12 @@
     position: absolute;
     left: 1.25rem;
     /* Slightly more left spacing */
-    color: #9CA3AF;
+    color: #6B7280;
+    /* Darker gray for better visibility */
     pointer-events: none;
     z-index: 10;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
 }
 
 .textarea-wrapper {
