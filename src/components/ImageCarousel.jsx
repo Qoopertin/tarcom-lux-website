@@ -1,33 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './ImageCarousel.css';
 
 const ImageCarousel = ({ images, alt, onImageClick }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStart, setTouchStart] = useState(null);
-    const [touchEnd, setTouchEnd] = useState(null);
+    const [touchStartY, setTouchStartY] = useState(null);
+    const [isSwiping, setIsSwiping] = useState(false);
+    const carouselRef = useRef(null);
 
     const minSwipeDistance = 50;
+    const swipeThreshold = 10; // Threshold to determine swipe direction
 
     const onTouchStart = (e) => {
-        setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
+        setTouchStartY(e.targetTouches[0].clientY);
+        setIsSwiping(false);
     };
 
     const onTouchMove = (e) => {
-        setTouchEnd(e.targetTouches[0].clientX);
+        if (!touchStart || !touchStartY) return;
+
+        const currentX = e.targetTouches[0].clientX;
+        const currentY = e.targetTouches[0].clientY;
+
+        const diffX = Math.abs(touchStart - currentX);
+        const diffY = Math.abs(touchStartY - currentY);
+
+        // Determine if this is a horizontal or vertical swipe
+        if (!isSwiping && (diffX > swipeThreshold || diffY > swipeThreshold)) {
+            // If horizontal movement is greater, it's a horizontal swipe
+            if (diffX > diffY) {
+                setIsSwiping(true);
+                // Prevent page scroll for horizontal swipes
+                e.preventDefault();
+            }
+        }
+
+        // Continue preventing scroll if we're in a horizontal swipe
+        if (isSwiping) {
+            e.preventDefault();
+        }
     };
 
-    const onTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
+    const onTouchEnd = (e) => {
+        if (!touchStart || !touchStartY) return;
+
+        const touchEnd = e.changedTouches[0].clientX;
         const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
-        if (isLeftSwipe) {
-            nextSlide();
-        } else if (isRightSwipe) {
-            prevSlide();
+
+        // Only trigger slide change if we were in a horizontal swipe
+        if (isSwiping && Math.abs(distance) > minSwipeDistance) {
+            const isLeftSwipe = distance > 0;
+            if (isLeftSwipe) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
         }
+
+        // Reset swipe state
+        setTouchStart(null);
+        setTouchStartY(null);
+        setIsSwiping(false);
     };
 
     const nextSlide = () => {
@@ -45,7 +80,7 @@ const ImageCarousel = ({ images, alt, onImageClick }) => {
     if (!images || images.length === 0) return null;
 
     return (
-        <div className="carousel-container">
+        <div className="carousel-container" ref={carouselRef}>
             <div
                 className="carousel-track"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -58,8 +93,9 @@ const ImageCarousel = ({ images, alt, onImageClick }) => {
                         <img
                             src={img}
                             alt={`${alt} - ${index + 1}`}
-                            onClick={() => onImageClick && onImageClick(img)}
+                            onClick={() => onImageClick && onImageClick(img, index)}
                             style={{ cursor: onImageClick ? 'pointer' : 'default' }}
+                            draggable={false}
                         />
                     </div>
                 ))}

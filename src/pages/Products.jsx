@@ -10,7 +10,7 @@ import ImageLightbox from '../components/ImageLightbox';
 const ProductCard = ({ title, description, images, onImageClick }) => (
     <div className="product-card">
         {images && images.length > 0 && (
-            <ImageCarousel images={images} alt={title} onImageClick={onImageClick} />
+            <ImageCarousel images={images} alt={title} onImageClick={(img, index) => onImageClick(images, index)} />
         )}
         <div className="product-info">
             <h3>{title}</h3>
@@ -39,6 +39,8 @@ const Products = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [lightboxImage, setLightboxImage] = useState(null);
+    const [lightboxImages, setLightboxImages] = useState([]);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
 
     // Derive selected category directly from URL hash, default to 'apples'
     const getCategoryFromHash = () => {
@@ -208,7 +210,11 @@ const Products = () => {
                             <h2 className="details-title">{t('products.varietiesTitle')}</h2>
                             <div className="products-grid">
                                 {apples.map((apple, index) => (
-                                    <ProductCard key={index} {...apple} onImageClick={setLightboxImage} />
+                                    <ProductCard key={index} {...apple} onImageClick={(imgs, idx) => {
+                                        setLightboxImages(imgs);
+                                        setLightboxIndex(idx);
+                                        setLightboxImage(imgs[idx]);
+                                    }} />
                                 ))}
                             </div>
                         </div>
@@ -221,7 +227,11 @@ const Products = () => {
                                 <ImageCarousel
                                     images={['/images/plums-gallery/1.jpg']}
                                     alt={t('products.details.plums.title')}
-                                    onImageClick={setLightboxImage}
+                                    onImageClick={(img) => {
+                                        setLightboxImages(['/images/plums-gallery/1.jpg']);
+                                        setLightboxIndex(0);
+                                        setLightboxImage(img);
+                                    }}
                                 />
                             </div>
                             <p className="details-text max-w-3xl mx-auto">
@@ -247,7 +257,11 @@ const Products = () => {
                             </p>
                             <div className="products-grid">
                                 {berries.map((berry, index) => (
-                                    <ProductCard key={index} {...berry} onImageClick={setLightboxImage} />
+                                    <ProductCard key={index} {...berry} onImageClick={(imgs, idx) => {
+                                        setLightboxImages(imgs);
+                                        setLightboxIndex(idx);
+                                        setLightboxImage(imgs[idx]);
+                                    }} />
                                 ))}
                             </div>
                         </div>
@@ -258,7 +272,8 @@ const Products = () => {
             {/* Image Lightbox */}
             {lightboxImage && (
                 <ImageLightbox
-                    image={lightboxImage}
+                    images={lightboxImages}
+                    initialIndex={lightboxIndex}
                     alt={selectedCategory || 'Product'}
                     onClose={() => setLightboxImage(null)}
                 />
