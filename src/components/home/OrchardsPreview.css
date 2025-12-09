@@ -9,9 +9,27 @@
     align-items: center;
 }
 
+/* Mobile: map appears below content */
+.orchards-map {
+    order: 2;
+}
+
+.orchards-content {
+    order: 1;
+}
+
+/* Desktop: reset order, map on left, content on right */
 @media (min-width: 992px) {
     .orchards-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .orchards-map {
+        order: 0;
+    }
+
+    .orchards-content {
+        order: 0;
     }
 }
 

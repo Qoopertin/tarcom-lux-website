@@ -17,8 +17,8 @@ const Home = () => {
       <OrchardsPreview />
       <ProductsPreview />
       <Expectations />
-      <FromOrchardToTruck />
       <Quality />
+      <FromOrchardToTruck />
       <WhyUs />
       <ContactSection />
     </main>
