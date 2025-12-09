@@ -59,25 +59,10 @@ const ContactSection = () => {
             <div className="container">
                 <div className="contact-content-wrapper">
 
-                    {/* Left Side: Text Content */}
-                    <div className="contact-text">
-                        <h2 className="section-title">{t('contact.title')}</h2>
-                        <h3 className="section-subtitle">{t('contact.subtitle')}</h3>
-
-                        <div className="contact-direct-info">
-                            <h4>{t('contact.directTitle')}</h4>
-                            <p>{t('contact.directText')}</p>
-                            <ul>
-                                <li><strong>{t('contact.directEmail')}</strong> info@frigo-term.com</li>
-                                <li><strong>{t('contact.directAddress')}</strong> Pocrovca, Dondușeni, Moldova</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Right Side: Contact Form */}
+                    {/* Contact Form - Centered */}
                     <div className="contact-form-container">
                         <div className="contact-card">
-                            <h3 className="form-title">{t('contact.form.title')}</h3>
+                            <h3 className="form-title">{t('contact.title')}</h3>
 
                             <form onSubmit={handleSubmit} className="contact-form">
                                 <div className="form-group">

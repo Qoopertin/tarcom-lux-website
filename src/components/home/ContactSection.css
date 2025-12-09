@@ -5,76 +5,31 @@
 }
 
 .contact-content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-@media (min-width: 992px) {
-    .contact-content-wrapper {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-}
-
-/* Left Side Text */
-.contact-text .section-title {
-    margin-bottom: 1rem;
-}
-
-.contact-text .section-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.contact-direct-info {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.contact-direct-info h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--color-text-main);
-}
-
-.contact-direct-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-direct-info li {
-    margin-bottom: 0.5rem;
-    color: var(--color-text-muted);
-}
-
-.contact-direct-info li strong {
-    color: var(--color-text-main);
-    margin-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 /* Contact Form Card */
 .contact-form-container {
     width: 100%;
+    max-width: 600px;
+    /* Limit width since it's now centered alone */
+    margin: 0 auto;
 }
 
 .contact-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .form-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: var(--color-text-main);
+    text-align: center;
 }
 
 .contact-form {
@@ -104,9 +59,11 @@
 
 .input-icon {
     position: absolute;
-    left: 1rem;
+    left: 1.25rem;
+    /* Slightly more left spacing */
     color: #9CA3AF;
     pointer-events: none;
+    z-index: 10;
 }
 
 .textarea-wrapper {
@@ -120,7 +77,8 @@
 .input-wrapper input,
 .input-wrapper textarea {
     width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    padding: 0.875rem 1rem 0.875rem 3.5rem;
+    /* Increased left padding to 3.5rem (56px) */
     border: 1px solid #E5E7EB;
     border-radius: 0.75rem;
     font-family: inherit;
