@@ -75,32 +75,22 @@
 .input-icon {
     position: absolute;
     left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: #6B7280;
     pointer-events: none;
     z-index: 10;
 }
 
 .input-icon.textarea-icon {
-    top: 1.125rem;
+    top: 1.25rem;
+    transform: none;
 }
 
 .input-wrapper input,
 .input-wrapper textarea {
     width: 100%;
-    padding: 1rem 1.25rem 1rem 3.5rem;
-    border: 2px solid #E5E7EB;
-    border-radius: 1rem;
-    font-family: inherit;
-    font-size: 1rem;
-    color: #111827;
-    background-color: #F9FAFB;
-    transition: all 0.3s ease;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.25rem 1rem 3.25rem;
     border: 2px solid #E5E7EB;
     border-radius: 1rem;
     font-family: inherit;
@@ -127,6 +117,7 @@
 .input-wrapper textarea {
     resize: vertical;
     min-height: 140px;
+    padding-top: 1rem;
 }
 
 .submit-btn {
