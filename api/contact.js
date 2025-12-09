@@ -9,15 +9,20 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: 'Missing required fields' });
     }
 
-    // Use nodemailer if environment variables are present
-    // Otherwise simulate success (or return error if strict)
-    // For this implementation, we try to send real email if config exists.
+    // STRICT CHECK: Fail if Env Vars are missing
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+        console.error('SERVER CONFIG ERROR: Missing EMAIL_USER or EMAIL_PASS');
+        return res.status(500).json({
+            message: 'Server configuration error: Email credentials missing. Please check Vercel Environment Variables.'
+        });
+    }
 
     const nodemailer = await import('nodemailer');
 
+    // Gmail SMTP Configuration
     const transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST || 'smtp.gmail.com',
-        port: process.env.EMAIL_PORT || 465,
+        host: 'smtp.gmail.com',
+        port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
             user: process.env.EMAIL_USER,
@@ -26,18 +31,10 @@ export default async function handler(req, res) {
     });
 
     try {
-        // If no env vars, we can't send real email.
-        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-            console.warn('Missing EMAIL_USER or EMAIL_PASS environment variables.');
-            // In development/preview without keys, we might want to return success to show UI works
-            // But for production, this should fail or be configured.
-            // Returning 200 for now to allow UI testing without crashing, but logging error.
-            return res.status(200).json({ message: 'Simulation: Email "sent" (Configure Env Vars for real sending)' });
-        }
-
         await transporter.sendMail({
-            from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-            to: 'info@frigo-term.com, gworkgw@gmail.com', // Primary and fallback as requested
+            from: `"Website Contact Form" <${process.env.EMAIL_USER}>`, // Must match authenticated user
+            to: 'info@frigo-term.com', // Cloudflare will forward this to gworkgw@gmail.com
+            replyTo: email, // Reply directly to the client
             subject: `New Contact Form: ${name}`,
             text: `
 Name: ${name}
@@ -46,21 +43,30 @@ Phone: ${phone || 'Not provided'}
 
 Message:
 ${message}
-      `,
+            `,
             html: `
-<h3>New Contact Message</h3>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-<hr/>
-<p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
-      `,
+<div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+    <h2 style="color: #2563EB;">New Contact Message</h2>
+    <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+    </div>
+    <div style="border-top: 1px solid #eee; padding-top: 20px;">
+        <p><strong>Message:</strong></p>
+        <p style="white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
+    </div>
+</div>
+            `,
         });
 
+        console.log(`Email sent successfully from ${email} to info@frigo-term.com`);
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
-        console.error('Email send error:', error);
-        return res.status(500).json({ message: 'Failed to send email', error: error.message });
+        console.error('Nodemailer Send Error:', error);
+        return res.status(500).json({
+            message: 'Failed to send email. Please try again later.',
+            error: error.message
+        });
     }
 }
