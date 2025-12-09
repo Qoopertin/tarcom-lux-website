@@ -66,15 +66,19 @@ const ContactSection = () => {
 
 
                             <form onSubmit={handleSubmit} className="contact-form">
-                                <div className="form-group">
-                                    <label htmlFor="name">{t('contact.form.name')}</label>
-                                    <div className="input-wrapper">
-                                        <User className="input-icon" size={20} />
+                                {/* Name Field */}
+                                <div className="field-group">
+                                    <label className="field-label" htmlFor="name">{t('contact.form.name')}</label>
+                                    <div className="field-input-wrapper">
+                                        <span className="field-icon">
+                                            <User size={18} color="#6B7280" />
+                                        </span>
                                         <input
                                             type="text"
                                             id="name"
                                             name="name"
                                             placeholder={t('contact.form.namePlaceholder')}
+                                            className="field-input"
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
@@ -83,15 +87,19 @@ const ContactSection = () => {
                                     </div>
                                 </div>
 
-                                <div className="form-group">
-                                    <label htmlFor="email">{t('contact.form.email')}</label>
-                                    <div className="input-wrapper">
-                                        <Mail className="input-icon" size={20} />
+                                {/* Email Field */}
+                                <div className="field-group">
+                                    <label className="field-label" htmlFor="email">{t('contact.form.email')}</label>
+                                    <div className="field-input-wrapper">
+                                        <span className="field-icon">
+                                            <Mail size={18} color="#6B7280" />
+                                        </span>
                                         <input
                                             type="email"
                                             id="email"
                                             name="email"
                                             placeholder={t('contact.form.emailPlaceholder')}
+                                            className="field-input"
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
@@ -100,15 +108,19 @@ const ContactSection = () => {
                                     </div>
                                 </div>
 
-                                <div className="form-group">
-                                    <label htmlFor="phone">{t('contact.form.phone')}</label>
-                                    <div className="input-wrapper">
-                                        <Phone className="input-icon" size={20} />
+                                {/* Phone Field */}
+                                <div className="field-group">
+                                    <label className="field-label" htmlFor="phone">{t('contact.form.phone')}</label>
+                                    <div className="field-input-wrapper">
+                                        <span className="field-icon">
+                                            <Phone size={18} color="#6B7280" />
+                                        </span>
                                         <input
                                             type="tel"
                                             id="phone"
                                             name="phone"
                                             placeholder={t('contact.form.phonePlaceholder')}
+                                            className="field-input"
                                             value={formData.phone}
                                             onChange={handleChange}
                                             disabled={status === 'sending'}
@@ -116,14 +128,18 @@ const ContactSection = () => {
                                     </div>
                                 </div>
 
-                                <div className="form-group">
-                                    <label htmlFor="message">{t('contact.form.message')}</label>
-                                    <div className="input-wrapper">
-                                        <MessageSquare className="input-icon textarea-icon" size={20} />
+                                {/* Message Field */}
+                                <div className="field-group">
+                                    <label className="field-label" htmlFor="message">{t('contact.form.message')}</label>
+                                    <div className="field-input-wrapper">
+                                        <span className="field-icon" style={{ top: '1.5rem', transform: 'none' }}>
+                                            <MessageSquare size={18} color="#6B7280" />
+                                        </span>
                                         <textarea
                                             id="message"
                                             name="message"
                                             placeholder={t('contact.form.messagePlaceholder')}
+                                            className="field-input field-textarea"
                                             value={formData.message}
                                             onChange={handleChange}
                                             required

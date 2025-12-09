@@ -39,62 +39,54 @@
     font-weight: 700;
 }
 
-.form-subtitle {
-    font-size: 1.05rem;
-    color: #6B7280;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.form-group {
+/* --- NEW FIELD STYLES --- */
+
+.field-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 6px;
 }
 
-.form-group label {
+.field-label {
     font-size: 0.95rem;
     font-weight: 600;
     color: #374151;
     margin-left: 0.25rem;
 }
 
-.input-wrapper {
+.field-input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
-.input-icon {
+.field-icon {
     position: absolute;
-    left: 1.25rem;
+    left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #6B7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     pointer-events: none;
     z-index: 10;
 }
 
-.input-icon.textarea-icon {
-    top: 1.5rem;
-    transform: none;
-}
-
-.input-wrapper input,
-.input-wrapper textarea {
+.field-input {
     width: 100%;
-    padding: 1rem 1.25rem 1rem 3.75rem;
-    /* Increased to 60px */
-    border: 2px solid #E5E7EB;
     border-radius: 1rem;
+    /* Keeping the rounded styling */
+    border: 2px solid #E5E7EB;
+    padding: 12px 14px;
+    /* IMPORTANT: leave enough space for the icon */
+    padding-left: 48px;
+    /* Slightly more than 40px for better spacing */
     font-family: inherit;
     font-size: 1rem;
     color: #111827;
@@ -102,26 +94,32 @@
     transition: all 0.3s ease;
 }
 
-/* Fix focusing ring overlap */
-.input-wrapper input:focus,
-.input-wrapper textarea:focus {
+.field-input:focus {
     outline: none;
     border-color: #fbbf24;
     background-color: white;
     box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.1);
-    transform: translateY(0);
-    /* Removed negative transform to prevent potential layout shifts */
 }
 
-.input-wrapper input::placeholder,
-.input-wrapper textarea::placeholder {
+.field-input::placeholder {
     color: #9CA3AF;
 }
 
-.input-wrapper textarea {
-    resize: vertical;
+.field-textarea {
     min-height: 140px;
+    resize: vertical;
+    padding-top: 14px;
 }
+
+/* Mobile check */
+@media (max-width: 768px) {
+    .field-input {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+}
+
+/* --- SUBMIT BUTTON --- */
 
 .submit-btn {
     display: flex;
