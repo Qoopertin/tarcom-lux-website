@@ -72,7 +72,7 @@ ${message}
             `,
         });
 
-        console.log(`Email sent successfully from ${email} to info@frigo-term.com`);
+        console.log(`✅ Email sent successfully! Contact form submission from ${email} forwarded to ${process.env.EMAIL_USER}`);
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
         console.error('Nodemailer Send Error:', error);
