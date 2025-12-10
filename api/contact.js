@@ -42,23 +42,17 @@ export default async function handler(req, res) {
         },
     });
 
-    // Verify recipient configuration
-    const recipient = process.env.EMAIL_USER; // Send directly to Gmail to bypass Cloudflare for testing
+    // Email configuration - always send FROM server email, never from visitor
+    const toAddress = process.env.EMAIL_USER; // Can change to 'info@frigo-term.com' if Cloudflare routing is set up
 
-    // DEBUG: Check for environment variable issues (without leaking full values)
-    console.log(`[DEBUG] EMAIL_USER present: ${!!process.env.EMAIL_USER}, Length: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.length : 0}`);
-    console.log(`[DEBUG] EMAIL_PASS present: ${!!process.env.EMAIL_PASS}, Length: ${process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0}`);
-
-    // Safer "From" syntax using object to handle special characters in name
-    const msgOptions = {
-        from: {
-            name: name || "FRIGO-TERM Website",
-            address: process.env.EMAIL_USER
-        },
-        to: recipient,
-        replyTo: email,
-        subject: `New message from FRIGO-TERM website - ${name}`,
+    const mailOptions = {
+        from: `"FRIGO-TERM website" <${process.env.EMAIL_USER}>`, // Fixed sender - always your Gmail
+        to: toAddress, // Recipient - your Gmail
+        replyTo: email, // Visitor's email - ONLY used for reply-to, NOT for sending
+        subject: `New contact form message from website`,
         text: `
+You have received a new message from the FRIGO-TERM contact form:
+
 Name: ${name}
 Email: ${email}
 Phone: ${phone || 'Not provided'}
@@ -68,7 +62,7 @@ ${message}
         `,
         html: `
 <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-    <h2 style="color: #2563EB;">New Contact Message</h2>
+    <h2 style="color: #2563EB;">New Contact Form Submission</h2>
     <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
@@ -78,24 +72,22 @@ ${message}
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
     </div>
+    <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+    <p style="font-size: 0.9em; color: #6B7280;">To reply, simply click reply in your email client. It will respond directly to ${email}.</p>
 </div>
         `
     };
 
-    console.log(`[DEBUG] Attempting send with options:`, {
-        from: msgOptions.from,
-        to: msgOptions.to,
-        replyTo: msgOptions.replyTo,
-        subject: msgOptions.subject
-    });
-
     try {
-        const info = await transporter.sendMail(msgOptions);
-        console.log(`[SUCCESS] Email sent. MessageId: ${info.messageId}, Response: ${info.response}`);
-        console.log(`✅ Email sent successfully! Contact form submission from ${email} forwarded to ${recipient}`);
+        const info = await transporter.sendMail(mailOptions);
+
+        // Clear success log
+        console.log(`✅ Contact form: from ${email} sent via ${process.env.EMAIL_USER} to ${toAddress}`);
+        console.log(`📧 MessageId: ${info.messageId}`);
+
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
-        console.error('Nodemailer Send Error:', error);
+        console.error('❌ Nodemailer Send Error:', error);
         return res.status(500).json({
             message: 'Failed to send email. Please try again later.',
             error: error.message
