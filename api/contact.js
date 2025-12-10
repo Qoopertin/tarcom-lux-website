@@ -42,10 +42,16 @@ export default async function handler(req, res) {
         },
     });
 
+    // Verify recipient configuration
+    const recipient = process.env.EMAIL_USER; // Send directly to Gmail to bypass Cloudflare for testing
+    const sender = `"${name}" <${process.env.EMAIL_USER}>`;
+
+    console.log(`Attempting to send email - From: ${process.env.EMAIL_USER}, To: ${recipient}`);
+
     try {
         await transporter.sendMail({
-            from: `"FRIGO-TERM Website" <${process.env.EMAIL_USER}>`, // Must match authenticated user
-            to: process.env.EMAIL_USER, // Send directly to Gmail (danil1390@gmail.com)
+            from: sender, // Use user's name but authenticated email
+            to: recipient, // Direct to Gmail
             replyTo: email, // Reply directly to the client
             subject: `New message from FRIGO-TERM website - ${name}`,
             text: `
