@@ -7,30 +7,6 @@ import './Contact.css';
 const Contact = () => {
     const { t } = useLanguage();
 
-    // Department contact data
-    const contacts = [
-        {
-            key: 'general',
-            icon: 'FT',
-            data: t('contactPage.general', { returnObjects: true })
-        },
-        {
-            key: 'sales',
-            icon: 'S',
-            data: t('contactPage.sales', { returnObjects: true })
-        },
-        {
-            key: 'logistics',
-            icon: 'L',
-            data: t('contactPage.logistics', { returnObjects: true })
-        },
-        {
-            key: 'management',
-            icon: 'M',
-            data: t('contactPage.management', { returnObjects: true })
-        }
-    ];
-
     return (
         <div className="contact-page">
             {/* Page Header */}
@@ -57,40 +33,53 @@ const Contact = () => {
                             <div className="contact-details-card">
                                 <h3 className="details-title">{t('contactPage.detailsTitle')}</h3>
 
-                                {/* Department Contacts */}
-                                <div className="contacts-list">
-                                    {contacts.map((contact) => (
-                                        <div key={contact.key} className="contact-item">
-                                            <div className="contact-header">
-                                                <div className="contact-avatar">{contact.icon}</div>
-                                                <div className="contact-meta">
-                                                    <span className="contact-label">{contact.data.label}</span>
-                                                    <span className="contact-name">{contact.data.name}</span>
-                                                </div>
-                                            </div>
-                                            <div className="contact-info">
-                                                <div className="info-row">
-                                                    <Mail size={16} />
-                                                    <a href={`mailto:${contact.data.email}`}>{contact.data.email}</a>
-                                                </div>
-                                                <div className="info-row">
-                                                    <Phone size={16} />
-                                                    <a href={`tel:${contact.data.phone}`}>{contact.data.phone}</a>
-                                                </div>
-                                            </div>
+                                {/* General Company Contact */}
+                                <div className="contact-item compact">
+                                    <div className="contact-info-simple">
+                                        <h4 className="company-name">FRIGO-TERM</h4>
+                                        <div className="info-row">
+                                            <Mail size={16} />
+                                            <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
 
-                                {/* Languages Section */}
-                                <div className="languages-section">
-                                    <h4>{t('contactPage.languages.title')}</h4>
-                                    <p className="languages-subtitle">{t('contactPage.languages.subtitle')}</p>
-                                    <ul className="languages-list">
-                                        {t('contactPage.languages.list', { returnObjects: true }).map((lang, i) => (
-                                            <li key={i}>{lang}</li>
-                                        ))}
-                                    </ul>
+                                {/* Sales Department */}
+                                <div className="contact-item">
+                                    <div className="contact-header">
+                                        <div className="contact-avatar">S</div>
+                                        <div className="contact-meta">
+                                            <span className="contact-title">Sales Department</span>
+                                            <span className="contact-person">Name Surname</span>
+                                        </div>
+                                    </div>
+                                    <div className="contact-info">
+                                        <div className="info-row">
+                                            <Mail size={16} />
+                                            <a href="mailto:sales@frigo-term.com">sales@frigo-term.com</a>
+                                        </div>
+                                        <div className="info-row">
+                                            <Phone size={16} />
+                                            <a href="tel:+373 69 XXX XXX">+373 69 XXX XXX</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Director */}
+                                <div className="contact-item">
+                                    <div className="contact-header">
+                                        <div className="contact-avatar">D</div>
+                                        <div className="contact-meta">
+                                            <span className="contact-title">Director</span>
+                                            <span className="contact-person">Name Surname</span>
+                                        </div>
+                                    </div>
+                                    <div className="contact-info">
+                                        <div className="info-row">
+                                            <Mail size={16} />
+                                            <a href="mailto:director@frigo-term.com">director@frigo-term.com</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

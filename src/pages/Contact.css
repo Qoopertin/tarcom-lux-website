@@ -98,7 +98,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-bottom: 2rem;
 }
 
 .contact-item {
@@ -112,6 +111,24 @@
 .contact-item:hover {
     background: #F3F4F6;
     border-color: #fbbf24;
+}
+
+/* Compact card for general company info */
+.contact-item.compact {
+    padding: 1.25rem 1.5rem;
+}
+
+.contact-info-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.company-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
 }
 
 .contact-header {
@@ -139,6 +156,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    flex: 1;
 }
 
 .contact-label {
@@ -153,6 +171,18 @@
     font-size: 1rem;
     color: #111827;
     font-weight: 600;
+}
+
+.contact-title {
+    font-size: 1rem;
+    color: #111827;
+    font-weight: 700;
+}
+
+.contact-person {
+    font-size: 0.9rem;
+    color: #6B7280;
+    font-weight: 500;
 }
 
 .contact-info {
