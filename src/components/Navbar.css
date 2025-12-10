@@ -51,11 +51,25 @@
 .nav-link {
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
 }
 
 .nav-link:hover {
     color: var(--color-accent);
+}
+
+.nav-link.active {
+    background-color: var(--color-accent);
+    color: #111827;
+    font-weight: 600;
+}
+
+.navbar.scrolled .nav-link.active {
+    background-color: var(--color-accent);
+    color: #111827;
 }
 
 .lang-switcher {

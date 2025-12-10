@@ -19,26 +19,30 @@ const Footer = () => {
                     <div className="footer-links">
                         <h4>{t('footer.quickLinks')}</h4>
                         <ul>
+                            <li><Link to="/">{t('nav.home')}</Link></li>
+                            <li><Link to="/about">{t('nav.about')}</Link></li>
                             <li><Link to="/products">{t('nav.products')}</Link></li>
-                            <li><Link to="/orchards">{t('footer.gardens')}</Link></li>
-                            <li><Link to="/sourcing">Sourcing Network</Link></li>
-                            <li><Link to="/services">Services</Link></li>
+                            <li><Link to="/contact">{t('nav.contact')}</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-contact">
                         <h4>Contact Us</h4>
+                        <div className="company-info">
+                            <p className="company-legal">S.C. FRIGO-TERM S.R.L.</p>
+                            <p className="company-vat">VAT: RO _________</p>
+                        </div>
                         <div className="contact-item">
                             <MapPin size={18} />
-                            <span>Moldova, Donduseni district</span>
+                            <span>Moldova, Dondușeni district, Pocrovca</span>
                         </div>
                         <div className="contact-item">
                             <Phone size={18} />
-                            <span>+373 68 822 309</span>
+                            <a href="tel:+37368822309">+373 68 822 309</a>
                         </div>
                         <div className="contact-item">
                             <Mail size={18} />
-                            <span>daniil390@gmail.com</span>
+                            <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
                         </div>
                     </div>
 
