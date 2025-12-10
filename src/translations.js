@@ -276,12 +276,43 @@ const translations = {
                 sending: "Sending...",
                 success: "Message sent successfully!",
                 error: "Something went wrong. Please try again."
+            }
+        },
+
+        // Contact Page Layout
+        contactPage: {
+            title: "Get in touch",
+            subtitle: "Planning a season program or have specific questions? Reach out and we will respond within 24 hours.",
+            detailsTitle: "Contact Details",
+            general: {
+                label: "General & Info",
+                name: "FRIGO-TERM",
+                email: "info@frigo-term.com",
+                phone: "+373 69 123 456"
             },
-            directTitle: "Direct contact",
-            directText: "For faster response or if you prefer to call:",
-            directEmail: "Email:",
-            directPhone: "Phone:",
-            directAddress: "Address:"
+            sales: {
+                label: "Sales & Export (Apples)",
+                name: "Sales Department",
+                email: "sales@frigo-term.com",
+                phone: "+373 69 XXX XXX"
+            },
+            logistics: {
+                label: "Logistics / Trucks",
+                name: "Logistics Coordinator",
+                email: "logistics@frigo-term.com",
+                phone: "+373 69 XXX XXX"
+            },
+            management: {
+                label: "Management",
+                name: "Director",
+                email: "director@frigo-term.com",
+                phone: "+373 69 XXX XXX"
+            },
+            languages: {
+                title: "Communication",
+                subtitle: "Preferred languages:",
+                list: ["English", "Russian", "Romanian"]
+            }
         },
 
         // Footer

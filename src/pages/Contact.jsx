@@ -1,95 +1,97 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import Button from '../components/Button';
+import ContactForm from '../components/ContactForm';
 import './Contact.css';
 
 const Contact = () => {
     const { t } = useLanguage();
 
+    // Department contact data
+    const contacts = [
+        {
+            key: 'general',
+            icon: 'FT',
+            data: t('contactPage.general', { returnObjects: true })
+        },
+        {
+            key: 'sales',
+            icon: 'S',
+            data: t('contactPage.sales', { returnObjects: true })
+        },
+        {
+            key: 'logistics',
+            icon: 'L',
+            data: t('contactPage.logistics', { returnObjects: true })
+        },
+        {
+            key: 'management',
+            icon: 'M',
+            data: t('contactPage.management', { returnObjects: true })
+        }
+    ];
+
     return (
         <div className="contact-page">
+            {/* Page Header */}
             <div className="page-header">
                 <div className="container">
-                    <h1 className="page-title">{t('contact.title')}</h1>
+                    <h1 className="page-title">{t('contactPage.title')}</h1>
                     <p className="page-subtitle">
-                        {t('contact.subtitle')}
+                        {t('contactPage.subtitle')}
                     </p>
                 </div>
             </div>
 
+            {/* Main Content */}
             <section className="contact-content section-padding">
                 <div className="container">
                     <div className="contact-grid">
-                        {/* Contact Form */}
-                        <div className="contact-form-wrapper">
-                            <h2>{t('contact.formTitle')}</h2>
-                            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                                <div className="form-group">
-                                    <label htmlFor="name">{t('contact.formName')}</label>
-                                    <input type="text" id="name" placeholder={t('contact.formName')} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="company">{t('contact.formCompany')}</label>
-                                    <input type="text" id="company" placeholder={t('contact.formCompany')} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="country">Country</label>
-                                    <input type="text" id="country" placeholder="Your country" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">{t('contact.formEmail')}</label>
-                                    <input type="email" id="email" placeholder={t('contact.formEmail')} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Phone / WhatsApp</label>
-                                    <input type="tel" id="phone" placeholder="+40..." />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="message">{t('contact.formMessage')}</label>
-                                    <textarea id="message" rows="5" placeholder={t('contact.formMessage')}></textarea>
-                                </div>
-                                <Button variant="primary" size="lg" className="w-full">
-                                    {t('contact.formButton')}
-                                </Button>
-                            </form>
+                        {/* LEFT: Contact Form */}
+                        <div className="contact-form-column">
+                            <ContactForm />
                         </div>
 
-                        {/* Contact Info Side */}
-                        <div className="contact-info-side">
-                            <div className="info-card">
-                                <h3>Contact Details</h3>
-                                <div className="info-item">
-                                    <MapPin className="info-icon" />
-                                    <div>
-                                        <strong>Based in:</strong>
-                                        <p>Northern Moldova (Dondușeni District)</p>
-                                    </div>
-                                </div>
-                                <div className="info-item">
-                                    <Mail className="info-icon" />
-                                    <div>
-                                        <strong>Email:</strong>
-                                        <p>info@tarcomlux.md</p>
-                                    </div>
-                                </div>
-                                <div className="info-item">
-                                    <Phone className="info-icon" />
-                                    <div>
-                                        <strong>Phone / WhatsApp:</strong>
-                                        <p>+373 69 123 456</p>
-                                    </div>
-                                </div>
-                            </div>
+                        {/* RIGHT: Contact Details */}
+                        <div className="contact-details-column">
+                            <div className="contact-details-card">
+                                <h3 className="details-title">{t('contactPage.detailsTitle')}</h3>
 
-                            <div className="info-card mt-4">
-                                <h3>Communication</h3>
-                                <p>Preferred languages:</p>
-                                <ul className="lang-list">
-                                    <li>English</li>
-                                    <li>Russian</li>
-                                    <li>Romanian</li>
-                                </ul>
+                                {/* Department Contacts */}
+                                <div className="contacts-list">
+                                    {contacts.map((contact) => (
+                                        <div key={contact.key} className="contact-item">
+                                            <div className="contact-header">
+                                                <div className="contact-avatar">{contact.icon}</div>
+                                                <div className="contact-meta">
+                                                    <span className="contact-label">{contact.data.label}</span>
+                                                    <span className="contact-name">{contact.data.name}</span>
+                                                </div>
+                                            </div>
+                                            <div className="contact-info">
+                                                <div className="info-row">
+                                                    <Mail size={16} />
+                                                    <a href={`mailto:${contact.data.email}`}>{contact.data.email}</a>
+                                                </div>
+                                                <div className="info-row">
+                                                    <Phone size={16} />
+                                                    <a href={`tel:${contact.data.phone}`}>{contact.data.phone}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Languages Section */}
+                                <div className="languages-section">
+                                    <h4>{t('contactPage.languages.title')}</h4>
+                                    <p className="languages-subtitle">{t('contactPage.languages.subtitle')}</p>
+                                    <ul className="languages-list">
+                                        {t('contactPage.languages.list', { returnObjects: true }).map((lang, i) => (
+                                            <li key={i}>{lang}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -4,12 +4,6 @@
     overflow: hidden;
 }
 
-.contact-content-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
 /* Contact Form Card */
 .contact-form-container {
     width: 100%;
