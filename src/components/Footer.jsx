@@ -57,11 +57,6 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="social-links">
-                            <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-                            <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
-                            <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                        </div>
                     </div>
                 </div>
 
