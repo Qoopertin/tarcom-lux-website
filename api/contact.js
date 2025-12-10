@@ -44,25 +44,29 @@ export default async function handler(req, res) {
 
     // Verify recipient configuration
     const recipient = process.env.EMAIL_USER; // Send directly to Gmail to bypass Cloudflare for testing
-    const sender = `"${name}" <${process.env.EMAIL_USER}>`;
 
-    console.log(`Attempting to send email - From: ${process.env.EMAIL_USER}, To: ${recipient}`);
+    // DEBUG: Check for environment variable issues (without leaking full values)
+    console.log(`[DEBUG] EMAIL_USER present: ${!!process.env.EMAIL_USER}, Length: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.length : 0}`);
+    console.log(`[DEBUG] EMAIL_PASS present: ${!!process.env.EMAIL_PASS}, Length: ${process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0}`);
 
-    try {
-        await transporter.sendMail({
-            from: sender, // Use user's name but authenticated email
-            to: recipient, // Direct to Gmail
-            replyTo: email, // Reply directly to the client
-            subject: `New message from FRIGO-TERM website - ${name}`,
-            text: `
+    // Safer "From" syntax using object to handle special characters in name
+    const msgOptions = {
+        from: {
+            name: name || "FRIGO-TERM Website",
+            address: process.env.EMAIL_USER
+        },
+        to: recipient,
+        replyTo: email,
+        subject: `New message from FRIGO-TERM website - ${name}`,
+        text: `
 Name: ${name}
 Email: ${email}
 Phone: ${phone || 'Not provided'}
 
 Message:
 ${message}
-            `,
-            html: `
+        `,
+        html: `
 <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
     <h2 style="color: #2563EB;">New Contact Message</h2>
     <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
@@ -75,10 +79,20 @@ ${message}
         <p style="white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
     </div>
 </div>
-            `,
-        });
+        `
+    };
 
-        console.log(`✅ Email sent successfully! Contact form submission from ${email} forwarded to ${process.env.EMAIL_USER}`);
+    console.log(`[DEBUG] Attempting send with options:`, {
+        from: msgOptions.from,
+        to: msgOptions.to,
+        replyTo: msgOptions.replyTo,
+        subject: msgOptions.subject
+    });
+
+    try {
+        const info = await transporter.sendMail(msgOptions);
+        console.log(`[SUCCESS] Email sent. MessageId: ${info.messageId}, Response: ${info.response}`);
+        console.log(`✅ Email sent successfully! Contact form submission from ${email} forwarded to ${recipient}`);
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
         console.error('Nodemailer Send Error:', error);
