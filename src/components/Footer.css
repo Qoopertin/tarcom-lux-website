@@ -54,8 +54,6 @@
 }
 
 /* Center: Quick Links Column */
-.footer-links {}
-
 .links-list {
     list-style: none;
     padding: 0;
@@ -77,8 +75,6 @@
 }
 
 /* Right: Contact Us Column */
-.footer-contact {}
-
 .contact-info {
     display: flex;
     flex-direction: column;
