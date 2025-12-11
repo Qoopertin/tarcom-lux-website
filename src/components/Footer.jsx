@@ -18,7 +18,9 @@ const Footer = () => {
 
                     {/* Middle: Contact Us Column */}
                     <div className="footer-contact">
-                        <h4 className="footer-title">Contact Us</h4>
+                        <h4 className="footer-title">
+                            <Link to="/contact" className="footer-title-link">Contact Us</Link>
+                        </h4>
                         <div className="contact-info">
                             <div className="info-line">S.C. FRIGO-TERM S.R.L.</div>
                             <div className="info-line">IDNO: 1007604001227</div>
