@@ -46,27 +46,27 @@
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
 }
 
 @media (max-width: 968px) {
     .contact-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
     }
 }
 
 /* Contact Form Column */
 .contact-form-column {
-    width: 100%;
+    flex: 1.5;
 }
 
 /* Contact Details Column */
 .contact-details-column {
-    width: 100%;
+    flex: 1;
+    display: flex;
 }
 
 .contact-details-card {
@@ -75,14 +75,40 @@
     border-radius: 2rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 768px) {
+.contact-details-card>.details-title {
+    margin-bottom: 2rem;
+}
+
+.contact-details-card>.contact-item:first-of-type {
+    margin-bottom: auto;
+}
+
+.contact-details-card>.contact-item:nth-of-type(2) {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.contact-details-card>.contact-item:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (max-width: 968px) {
+    .contact-details-column {
+        display: block;
+    }
+
     .contact-details-card {
         padding: 2rem 1.5rem;
-        position: static;
+    }
+
+    .contact-details-card>.contact-item:first-of-type,
+    .contact-details-card>.contact-item:nth-of-type(2) {
+        margin: 0 0 1.5rem 0;
     }
 }
 
@@ -214,42 +240,4 @@
 .info-row a:hover {
     color: #fbbf24;
     text-decoration: underline;
-}
-
-/* Languages Section */
-.languages-section {
-    padding-top: 2rem;
-    border-top: 1px solid #E5E7EB;
-}
-
-.languages-section h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.75rem;
-}
-
-.languages-subtitle {
-    font-size: 0.875rem;
-    color: #6B7280;
-    margin-bottom: 0.75rem;
-}
-
-.languages-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.languages-list li {
-    padding: 0.5rem 1rem;
-    background: #F9FAFB;
-    border: 1px solid #E5E7EB;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    color: #374151;
-    font-weight: 500;
 }

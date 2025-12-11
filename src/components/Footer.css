@@ -15,10 +15,9 @@
     align-items: start;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .footer-content {
         grid-template-columns: 1.5fr 1fr 1fr;
-        /* Adjusted for better spacing */
         gap: 4rem;
     }
 }
@@ -52,7 +51,34 @@
     font-size: 0.875rem;
 }
 
-/* Quick Links Column */
+/* Contact Us Column (Middle) */
+.footer-contact {}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.info-line {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.info-line a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-line a:hover {
+    color: var(--color-accent);
+}
+
+/* Quick Links Column (Right) */
+.footer-links {}
+
 .links-list {
     list-style: none;
     padding: 0;
@@ -70,58 +96,6 @@
 }
 
 .links-list a:hover {
-    color: var(--color-accent);
-}
-
-/* Contact Column */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-}
-
-.info-item svg {
-    color: var(--color-text-muted);
-    flex-shrink: 0;
-    margin-top: 0.125rem;
-}
-
-.info-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.company-name {
-    color: var(--color-text-muted);
-    /* Matched description color */
-    font-weight: 700;
-    /* Bold as requested */
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-.company-vat {
-    color: var(--color-text-muted);
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-.info-item a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.info-item a:hover {
     color: var(--color-accent);
 }
 
