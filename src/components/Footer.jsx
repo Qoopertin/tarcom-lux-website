@@ -32,18 +32,18 @@ const Footer = () => {
                     <div className="footer-contact">
                         <h4 className="footer-title">Contact Us</h4>
                         <div className="contact-info">
-                            <div className="info-line">S.C. FRIGO-TERM S.R.L.</div>
-                            <div className="info-line">IDNO: 1007640001227</div>
-                            <div className="info-line">VAT: MD _________</div>
-                            <div className="info-line info-with-icon">
+                            <div>S.C. FRIGO-TERM S.R.L.</div>
+                            <div>IDNO: 1007640001227</div>
+                            <div>VAT: MD _________</div>
+                            <div className="info-with-icon">
                                 <MapPin size={16} />
                                 <span>Pocrovca, Dondușeni district, Moldova<br />MD-5051</span>
                             </div>
-                            <div className="info-line info-with-icon">
+                            <div className="info-with-icon">
                                 <Phone size={16} />
                                 <a href="tel:+37368822309">+373 68 822 309</a>
                             </div>
-                            <div className="info-line info-with-icon">
+                            <div className="info-with-icon">
                                 <Mail size={16} />
                                 <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
                             </div>
