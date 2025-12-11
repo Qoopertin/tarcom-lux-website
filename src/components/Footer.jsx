@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import './Footer.css';
 
@@ -9,27 +10,32 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
-                <div className="footer-content">
+                <div className="footer-inner">
                     {/* Left: Brand Column */}
                     <div className="footer-brand">
                         <h3 className="footer-logo">FRIGO-TERM</h3>
                         <p className="footer-description">{t('footer.description')}</p>
                     </div>
 
-                    {/* Middle: Contact Us Column */}
+                    {/* Center: Contact Us Column */}
                     <div className="footer-contact">
                         <h4 className="footer-title">
                             <Link to="/contact" className="footer-title-link">Contact Us</Link>
                         </h4>
                         <div className="contact-info">
                             <div className="info-line">S.C. FRIGO-TERM S.R.L.</div>
-                            <div className="info-line">IDNO: 1007604001227</div>
+                            <div className="info-line">IDNO: 1007640001227</div>
                             <div className="info-line">VAT: RO _________</div>
-                            <div className="info-line">Moldova, Dondușeni district, Pocrovca</div>
-                            <div className="info-line">
+                            <div className="info-line info-with-icon">
+                                <MapPin size={16} />
+                                <span>Moldova, Dondușeni district, Pocrovca</span>
+                            </div>
+                            <div className="info-line info-with-icon">
+                                <Phone size={16} />
                                 <a href="tel:+37368822309">+373 68 822 309</a>
                             </div>
-                            <div className="info-line">
+                            <div className="info-line info-with-icon">
+                                <Mail size={16} />
                                 <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
                             </div>
                         </div>
