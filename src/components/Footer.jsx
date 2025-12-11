@@ -17,18 +17,27 @@ const Footer = () => {
                         <p className="footer-description">{t('footer.description')}</p>
                     </div>
 
-                    {/* Center: Contact Us Column */}
+                    {/* Center: Quick Links Column */}
+                    <div className="footer-links">
+                        <h4 className="footer-title">{t('footer.quickLinks')}</h4>
+                        <ul className="links-list">
+                            <li><Link to="/">{t('nav.home')}</Link></li>
+                            <li><Link to="/about">{t('nav.about')}</Link></li>
+                            <li><Link to="/products">{t('nav.products')}</Link></li>
+                            <li><Link to="/contact">{t('nav.contact')}</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Right: Contact Us Column */}
                     <div className="footer-contact">
-                        <h4 className="footer-title">
-                            <Link to="/contact" className="footer-title-link">Contact Us</Link>
-                        </h4>
+                        <h4 className="footer-title">Contact Us</h4>
                         <div className="contact-info">
                             <div className="info-line">S.C. FRIGO-TERM S.R.L.</div>
                             <div className="info-line">IDNO: 1007640001227</div>
-                            <div className="info-line">VAT: RO _________</div>
+                            <div className="info-line">VAT: MD _________</div>
                             <div className="info-line info-with-icon">
                                 <MapPin size={16} />
-                                <span>Moldova, Dondușeni district, Pocrovca</span>
+                                <span>Pocrovca, Dondușeni district, Moldova<br />MD-5051</span>
                             </div>
                             <div className="info-line info-with-icon">
                                 <Phone size={16} />
@@ -39,17 +48,6 @@ const Footer = () => {
                                 <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Right: Quick Links Column */}
-                    <div className="footer-links">
-                        <h4 className="footer-title">{t('footer.quickLinks')}</h4>
-                        <ul className="links-list">
-                            <li><Link to="/">{t('nav.home')}</Link></li>
-                            <li><Link to="/about">{t('nav.about')}</Link></li>
-                            <li><Link to="/products">{t('nav.products')}</Link></li>
-                            <li><Link to="/contact">{t('nav.contact')}</Link></li>
-                        </ul>
                     </div>
                 </div>
 

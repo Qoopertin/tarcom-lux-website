@@ -1,4 +1,4 @@
-/* Footer - Clean Centered Layout */
+/* Footer - Clean 3-Column Centered Layout */
 
 .footer {
     background-color: var(--color-bg-dark);
@@ -18,16 +18,13 @@
 
 @media (min-width: 768px) {
     .footer-inner {
-        display: flex;
+        grid-template-columns: 1.8fr 1fr 1.5fr;
         gap: 3rem;
-        justify-content: space-between;
-        align-items: flex-start;
     }
 }
 
 /* Left: Brand Column */
 .footer-brand {
-    flex: 1.5;
     max-width: 350px;
 }
 
@@ -55,58 +52,8 @@
     font-size: 0.875rem;
 }
 
-.footer-title-link {
-    color: var(--color-bg-white);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-title-link:hover {
-    color: var(--color-accent);
-}
-
-/* Center: Contact Us Column */
-.footer-contact {
-    flex: 1.2;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.info-line {
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.info-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.info-with-icon svg {
-    color: var(--color-text-muted);
-    flex-shrink: 0;
-}
-
-.info-line a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.info-line a:hover {
-    color: var(--color-accent);
-}
-
-/* Right: Quick Links Column */
-.footer-links {
-    flex: 1;
-}
+/* Center: Quick Links Column */
+.footer-links {}
 
 .links-list {
     list-style: none;
@@ -128,6 +75,43 @@
     color: var(--color-accent);
 }
 
+/* Right: Contact Us Column */
+.footer-contact {}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.info-line {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.info-with-icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.info-with-icon svg {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.info-line a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-line a:hover {
+    color: var(--color-accent);
+}
+
 /* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -144,14 +128,11 @@
 /* Mobile Responsive */
 @media (max-width: 767px) {
     .footer-inner {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
 
-    .footer-brand,
-    .footer-contact,
-    .footer-links {
+    .footer-brand {
         max-width: 100%;
     }
 }
