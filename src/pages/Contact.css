@@ -56,6 +56,15 @@
         flex-direction: column;
         gap: 2rem;
     }
+
+    /* Mobile order: Contact Details (1) -> Form (2) -> Team section (3 - handled in ManagementTeam.css) */
+    .contact-details-column {
+        order: 1;
+    }
+
+    .contact-form-column {
+        order: 2;
+    }
 }
 
 /* Contact Form Column */

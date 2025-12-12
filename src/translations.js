@@ -312,6 +312,23 @@ const translations = {
                 title: "Communication",
                 subtitle: "Preferred languages:",
                 list: ["English", "Russian", "Romanian"]
+            },
+            team: {
+                title: "Our Management Team",
+                members: {
+                    director: {
+                        name: "Nikolai Latyshev",
+                        role: "Director"
+                    },
+                    operations: {
+                        name: "Philipp Shcherbakov",
+                        role: "Operations Manager"
+                    },
+                    sales: {
+                        name: "Daniil Latyshev",
+                        role: "Sales Manager"
+                    }
+                }
             }
         },
 
@@ -597,7 +614,24 @@ const translations = {
             directText: "Pentru răspuns mai rapid sau dacă preferați să sunați:",
             directEmail: "Email:",
             directPhone: "Telefon:",
-            directAddress: "Adresă:"
+            directAddress: "Adresă:",
+            team: {
+                title: "Echipa noastră de management",
+                members: {
+                    director: {
+                        name: "Nikolai Latyshev",
+                        role: "Director"
+                    },
+                    operations: {
+                        name: "Philipp Shcherbakov",
+                        role: "Manager operațional"
+                    },
+                    sales: {
+                        name: "Daniil Latyshev",
+                        role: "Manager vânzări"
+                    }
+                }
+            }
         },
 
         // Footer
@@ -882,7 +916,24 @@ const translations = {
             directText: "Для быстрого ответа или если вы предпочитаете позвонить:",
             directEmail: "Email:",
             directPhone: "Телефон:",
-            directAddress: "Адрес:"
+            directAddress: "Адрес:",
+            team: {
+                title: "Наша управленческая команда",
+                members: {
+                    director: {
+                        name: "Латышев Николай",
+                        role: "Директор"
+                    },
+                    operations: {
+                        name: "Щербаков Филипп",
+                        role: "Операционный менеджер"
+                    },
+                    sales: {
+                        name: "Латышев Даниил",
+                        role: "Менеджер по продажам"
+                    }
+                }
+            }
         },
 
         // Footer

@@ -1,0 +1,112 @@
+/* Management Team Section */
+
+.management-team-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .management-team-section {
+        padding: 3rem 0;
+    }
+}
+
+.team-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .team-section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Grid for 3 team members */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tablet: 2 on top, 1 centered below */
+@media (max-width: 968px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+
+    .team-grid .team-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .team-grid .team-card:last-child {
+        grid-column: 1;
+        max-width: 100%;
+    }
+}
+
+/* Team Card - matching Contact page card style */
+.team-card {
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+}
+
+.team-card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.team-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card-content {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.team-member-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+}
+
+.team-member-role {
+    font-size: 0.95rem;
+    color: #6B7280;
+    margin: 0;
+    font-weight: 500;
+}

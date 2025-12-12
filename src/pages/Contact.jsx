@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import ContactForm from '../components/ContactForm';
+import ManagementTeam from '../components/ManagementTeam';
 import './Contact.css';
 
 const Contact = () => {
@@ -77,6 +78,9 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Management Team Section */}
+            <ManagementTeam />
         </div>
     );
 };
