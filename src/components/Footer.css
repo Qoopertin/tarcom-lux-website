@@ -8,34 +8,27 @@
 }
 
 /* Centered Footer Content - Using Flexbox for Reliable Alignment */
+/* Centered Footer Content - Using Grid for Reliable Alignment */
 .footer-inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
     gap: 4rem;
     margin-bottom: 3rem;
-    align-items: flex-start;
+    align-items: start;
 }
 
 /* Mobile: Stack vertically */
-@media (max-width: 767px) {
+@media (max-width: 900px) {
     .footer-inner {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 2.5rem;
     }
 }
 
-/* Left: Brand Column (40% width) */
+/* Left: Brand Column */
 .footer-brand {
-    flex: 0 0 40%;
+    /* No flex properties needed here anymore due to Grid parent */
     max-width: 400px;
-}
-
-@media (max-width: 767px) {
-    .footer-brand {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 .footer-logo {
@@ -65,17 +58,8 @@
     font-size: 0.875rem;
 }
 
-/* Center: Quick Links Column (20% width) */
-.footer-links {
-    flex: 0 0 20%;
-    min-width: 150px;
-}
-
-@media (max-width: 767px) {
-    .footer-links {
-        flex: 1 1 100%;
-    }
-}
+/* Center: Quick Links Column */
+/* .footer-links handled by grid */
 
 .links-list {
     list-style: none;
@@ -102,26 +86,17 @@
     color: var(--color-accent);
 }
 
-/* Right: Contact Us Column (35% width) */
-.footer-contact {
-    flex: 0 0 35%;
-    min-width: 250px;
-}
+/* Right: Contact Us Column */
+/* .footer-contact handled by grid */
 
-@media (max-width: 767px) {
-    .footer-contact {
-        flex: 1 1 100%;
-    }
-}
-
-.contact-info {
+.footer-contact-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
-/* Style all direct children of contact-info */
-.contact-info>div {
+/* Style all direct children of footer-contact-info */
+.footer-contact-info>div {
     color: var(--color-text-muted);
     font-size: 0.9rem;
     line-height: 1.6;
@@ -129,22 +104,22 @@
     padding-left: 0;
 }
 
-/* Items with icons - use margin-left negative to pull icon back */
+/* Items with icons - Clean flex alignment */
 .info-with-icon {
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem;
-    margin-left: -24px;
-    padding-left: 24px;
+    gap: 0.75rem;
+    /* Removed negative margins that caused misalignment */
+    padding-left: 0;
 }
 
 .info-with-icon svg {
     color: var(--color-text-muted);
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
-    margin-top: 0.25rem;
-    margin-left: 0;
+    margin-top: 0.15rem;
+    /* Optical alignment with text line-height */
 }
 
 .info-with-icon span,
@@ -155,13 +130,13 @@
     flex: 1;
 }
 
-.contact-info a {
+.footer-contact-info a {
     color: var(--color-text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.contact-info a:hover {
+.footer-contact-info a:hover {
     color: var(--color-accent);
 }
 

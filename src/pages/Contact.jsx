@@ -9,15 +9,6 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
-            {/* Page Header */}
-            <div className="page-header">
-                <div className="container">
-                    <h1 className="page-title">{t('contactPage.title')}</h1>
-                    <p className="page-subtitle">
-                        {t('contactPage.subtitle')}
-                    </p>
-                </div>
-            </div>
 
             {/* Main Content */}
             <section className="contact-content section-padding">

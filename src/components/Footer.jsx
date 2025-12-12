@@ -31,7 +31,7 @@ const Footer = () => {
                     {/* Right: Contact Us Column */}
                     <div className="footer-contact">
                         <h4 className="footer-title">Contact Us</h4>
-                        <div className="contact-info">
+                        <div className="footer-contact-info">
                             <div>S.C. FRIGO-TERM S.R.L.</div>
                             <div>IDNO: 1007640001227</div>
                             <div>VAT: MD _________</div>
