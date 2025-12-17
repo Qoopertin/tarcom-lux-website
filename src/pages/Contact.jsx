@@ -28,7 +28,11 @@ const Contact = () => {
                                 {/* General Company Contact */}
                                 <div className="contact-item compact">
                                     <div className="contact-info-simple">
-                                        <h4 className="company-name">FRIGO-TERM</h4>
+                                        <h4 className="company-name">S.C. FRIGO-TERM S.R.L.</h4>
+                                        <div className="info-row">
+                                            <MapPin size={16} />
+                                            <span>Pocrovca, Dondușeni district, Moldova<br />MD-5131</span>
+                                        </div>
                                         <div className="info-row">
                                             <Mail size={16} />
                                             <a href="mailto:info@frigo-term.com">info@frigo-term.com</a>
@@ -39,10 +43,10 @@ const Contact = () => {
                                 {/* Sales Department */}
                                 <div className="contact-item">
                                     <div className="contact-header">
-                                        <div className="contact-avatar">S</div>
+                                        <div className="contact-avatar">D</div>
                                         <div className="contact-meta">
                                             <span className="contact-title">Sales Department</span>
-                                            <span className="contact-person">Name Surname</span>
+                                            <span className="contact-person">Daniil Latisev</span>
                                         </div>
                                     </div>
                                     <div className="contact-info">
@@ -52,7 +56,7 @@ const Contact = () => {
                                         </div>
                                         <div className="info-row">
                                             <Phone size={16} />
-                                            <a href="tel:+373 69 XXX XXX">+373 69 XXX XXX</a>
+                                            <a href="tel:+37368822309">+373 68 822 309</a>
                                         </div>
                                     </div>
                                 </div>
@@ -60,10 +64,10 @@ const Contact = () => {
                                 {/* Director */}
                                 <div className="contact-item">
                                     <div className="contact-header">
-                                        <div className="contact-avatar">D</div>
+                                        <div className="contact-avatar">N</div>
                                         <div className="contact-meta">
                                             <span className="contact-title">Director</span>
-                                            <span className="contact-person">Name Surname</span>
+                                            <span className="contact-person">Nicolai Latisev</span>
                                         </div>
                                     </div>
                                     <div className="contact-info">

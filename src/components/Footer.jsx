@@ -34,10 +34,9 @@ const Footer = () => {
                         <div className="footer-contact-info">
                             <div>S.C. FRIGO-TERM S.R.L.</div>
                             <div>IDNO: 1007640001227</div>
-                            <div>VAT: MD _________</div>
                             <div className="info-with-icon">
                                 <MapPin size={16} />
-                                <span>Pocrovca, Dondușeni district, Moldova<br />MD-5051</span>
+                                <span>Pocrovca, Dondușeni district, Moldova<br />MD-5131</span>
                             </div>
                             <div className="info-with-icon">
                                 <Phone size={16} />
