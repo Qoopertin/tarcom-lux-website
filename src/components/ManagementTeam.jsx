@@ -11,7 +11,7 @@ const ManagementTeam = () => {
             image: '/team/director.jpg',
             name: t('contactPage.team.members.director.name'),
             role: t('contactPage.team.members.director.role'),
-            alt: 'Photo of Nikolai Latyshev, Director'
+            alt: 'Photo of Nikolai Latisev, Director'
         },
         {
             id: 'operations',
@@ -25,7 +25,7 @@ const ManagementTeam = () => {
             image: '/team/sales.jpg',
             name: t('contactPage.team.members.sales.name'),
             role: t('contactPage.team.members.sales.role'),
-            alt: 'Photo of Daniil Latyshev, Sales Manager'
+            alt: 'Photo of Daniil Latisev, Sales Manager'
         }
     ];
 

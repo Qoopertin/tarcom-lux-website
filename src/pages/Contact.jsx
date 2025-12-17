@@ -46,7 +46,7 @@ const Contact = () => {
                                         <div className="contact-avatar">D</div>
                                         <div className="contact-meta">
                                             <span className="contact-title">Sales Department</span>
-                                            <span className="contact-person">Daniil Latyshev</span>
+                                            <span className="contact-person">Daniil Latisev</span>
                                         </div>
                                     </div>
                                     <div className="contact-info">
@@ -67,7 +67,7 @@ const Contact = () => {
                                         <div className="contact-avatar">N</div>
                                         <div className="contact-meta">
                                             <span className="contact-title">Director</span>
-                                            <span className="contact-person">Nicolai Latyshev</span>
+                                            <span className="contact-person">Nicolai Latisev</span>
                                         </div>
                                     </div>
                                     <div className="contact-info">

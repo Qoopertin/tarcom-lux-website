@@ -317,7 +317,7 @@ const translations = {
                 title: "Our Management Team",
                 members: {
                     director: {
-                        name: "Nikolai Latyshev",
+                        name: "Nikolai Latisev",
                         role: "Director"
                     },
                     operations: {
@@ -325,7 +325,7 @@ const translations = {
                         role: "Operations Manager"
                     },
                     sales: {
-                        name: "Daniil Latyshev",
+                        name: "Daniil Latisev",
                         role: "Sales Manager"
                     }
                 }
@@ -619,7 +619,7 @@ const translations = {
                 title: "Echipa noastră de management",
                 members: {
                     director: {
-                        name: "Nikolai Latyshev",
+                        name: "Nikolai Latisev",
                         role: "Director"
                     },
                     operations: {
@@ -627,7 +627,7 @@ const translations = {
                         role: "Manager operațional"
                     },
                     sales: {
-                        name: "Daniil Latyshev",
+                        name: "Daniil Latisev",
                         role: "Manager vânzări"
                     }
                 }
@@ -921,7 +921,7 @@ const translations = {
                 title: "Наша управленческая команда",
                 members: {
                     director: {
-                        name: "Латышев Николай",
+                        name: "Латисев Николай",
                         role: "Директор"
                     },
                     operations: {
@@ -929,7 +929,7 @@ const translations = {
                         role: "Операционный менеджер"
                     },
                     sales: {
-                        name: "Латышев Даниил",
+                        name: "Латисев Даниил",
                         role: "Менеджер по продажам"
                     }
                 }
