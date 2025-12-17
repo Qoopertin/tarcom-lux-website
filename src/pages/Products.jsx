@@ -221,22 +221,23 @@ const Products = () => {
                     )}
 
                     {selectedCategory === 'plums' && (
-                        <div id="plums-details" className="category-details text-center">
-                            <h2 className="details-title">{t('products.details.plums.title')}</h2>
-                            <div className="max-w-3xl mx-auto mb-8">
-                                <ImageCarousel
+                        <div id="plums-details" className="category-details">
+                            <h2 className="details-title text-center mb-8">{t('products.details.plums.title')}</h2>
+                            <p className="details-text max-w-3xl mx-auto text-center mb-12">
+                                {t('products.details.plums.text')}
+                            </p>
+                            <div className="products-grid">
+                                <ProductCard
+                                    title={t('products.details.plums.varieties.stanley.name')}
+                                    description={t('products.details.plums.varieties.stanley.description')}
                                     images={['/images/plums-gallery/1.jpg']}
-                                    alt={t('products.details.plums.title')}
-                                    onImageClick={(img) => {
-                                        setLightboxImages(['/images/plums-gallery/1.jpg']);
-                                        setLightboxIndex(0);
-                                        setLightboxImage(img);
+                                    onImageClick={(imgs, idx) => {
+                                        setLightboxImages(imgs);
+                                        setLightboxIndex(idx);
+                                        setLightboxImage(imgs[idx]);
                                     }}
                                 />
                             </div>
-                            <p className="details-text max-w-3xl mx-auto">
-                                {t('products.details.plums.text')}
-                            </p>
                         </div>
                     )}
 

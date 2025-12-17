@@ -233,7 +233,13 @@ const translations = {
             details: {
                 plums: {
                     title: "Plums",
-                    text: "Seasonally we can add limited volumes of plums from our own and neighbouring gardens in northern Moldova. These are treated as an addition to apple programs rather than a separate large line."
+                    text: "Seasonally we can add limited volumes of plums from our own and neighbouring gardens in northern Moldova. These are treated as an addition to apple programs rather than a separate large line.",
+                    varieties: {
+                        stanley: {
+                            name: "Stanley",
+                            description: "The main variety we work with. Ideally suited for drying and processing, but also excellent fresh. Dark purple skin with sweet, firm flesh."
+                        }
+                    }
                 },
                 pears: {
                     title: "Pears",
@@ -574,7 +580,13 @@ const translations = {
             details: {
                 plums: {
                     title: "Prune",
-                    text: "Sezonier putem adăuga volume limitate de prune din livezile noastre și cele învecinate din nordul Moldovei. Acestea sunt tratate ca o completare la programele de mere mai degrabă decât o linie mare separată."
+                    text: "Sezonier putem adăuga volume limitate de prune din livezile noastre și cele învecinate din nordul Moldovei. Acestea sunt tratate ca o completare la programele de mere mai degrabă decât o linie mare separată.",
+                    varieties: {
+                        stanley: {
+                            name: "Stanley",
+                            description: "Principalul soi cu care lucrăm. Ideal pentru uscare și procesare, dar excelent și în stare proaspătă. Piele mov închis cu pulpă dulce și fermă."
+                        }
+                    }
                 },
                 pears: {
                     title: "Pere",
@@ -906,7 +918,13 @@ const translations = {
             details: {
                 plums: {
                     title: "Сливы",
-                    text: "Сезонно мы можем добавлять ограниченные объемы слив из наших собственных и соседних садов на севере Молдовы. Мы рассматриваем их как дополнение к яблочным программам, а не как отдельную большую линию."
+                    text: "Сезонно мы можем добавлять ограниченные объемы слив из наших собственных и соседних садов на севере Молдовы. Мы рассматриваем их как дополнение к яблочным программам, а не как отдельную большую линию.",
+                    varieties: {
+                        stanley: {
+                            name: "Стэнли",
+                            description: "Основной сорт, с которым мы работаем. Идеально подходит для сушки и переработки, но также отличен в свежем виде. Темно-фиолетовая кожица со сладкой, плотной мякотью."
+                        }
+                    }
                 },
                 pears: {
                     title: "Груши",
