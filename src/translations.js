@@ -634,6 +634,28 @@ const translations = {
             }
         },
 
+        // Contact Page Layout
+        contactPage: {
+            detailsTitle: "Detalii de contact",
+            team: {
+                title: "Echipa noastră de management",
+                members: {
+                    director: {
+                        name: "Nikolai Latisev",
+                        role: "Director"
+                    },
+                    operations: {
+                        name: "Philipp Shcherbakov",
+                        role: "Manager operațional"
+                    },
+                    sales: {
+                        name: "Daniil Latisev",
+                        role: "Manager vânzări"
+                    }
+                }
+            }
+        },
+
         // Footer
         footer: {
             description: "Livezi de familie din Moldova cu o rețea de aprovizionare de încredere. Fructe și legume proaspete pentru importatori europeni.",
@@ -917,6 +939,28 @@ const translations = {
             directEmail: "Email:",
             directPhone: "Телефон:",
             directAddress: "Адрес:",
+            team: {
+                title: "Наша управленческая команда",
+                members: {
+                    director: {
+                        name: "Латышев Николай",
+                        role: "Директор"
+                    },
+                    operations: {
+                        name: "Щербаков Филипп",
+                        role: "Операционный менеджер"
+                    },
+                    sales: {
+                        name: "Латышев Даниил",
+                        role: "Менеджер по продажам"
+                    }
+                }
+            }
+        },
+
+        // Contact Page Layout
+        contactPage: {
+            detailsTitle: "Контактные данные",
             team: {
                 title: "Наша управленческая команда",
                 members: {
