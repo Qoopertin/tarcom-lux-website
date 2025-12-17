@@ -547,6 +547,14 @@ const translations = {
                     name: "Red Chief",
                     description: "Culoare roșie intensă, gust dulce blând. Prezentare atrăgătoare. Dimensiune tipic 70mm+."
                 },
+                redDelicious: {
+                    name: "Red Delicious",
+                    description: "Mărul clasic roșu intens cu o aromă dulce, blândă și textură crocantă. Un favorit pentru consumul proaspăt."
+                },
+                jonagold: {
+                    name: "Jonagold",
+                    description: "Un măr mare, galben-verzui cu o tentă roșie. Dulce ca mierea cu o notă acrișoară, perfect pentru copt și mâncat."
+                },
                 florina: {
                     name: "Florina",
                     description: "Soi rezistent la boli cu pulpă fermă, durată bună de păstrare. Aromă echilibrată acrișoară-dulce. Dimensiune de obicei 70-80mm."
@@ -869,7 +877,15 @@ const translations = {
                 },
                 redChief: {
                     name: "Ред Чиф",
-                    description: "Насыщенный красный цвет, мягкий сладкий вкус. Привлекательная презентация. Размер обычно 70мм+."
+                    description: "Насыщенный красный цвет, мягкий сладкий вкус. Привлекательная презентация. Размер обычно 70mm+."
+                },
+                redDelicious: {
+                    name: "Ред Делишес",
+                    description: "Классическое насыщенно-красное яблоко с мягким сладким вкусом и хрустящей текстурой. Фаворит для свежего потребления."
+                },
+                jonagold: {
+                    name: "Джонаголд",
+                    description: "Крупное желто-зеленое яблоко с красным румянцем. Медово-сладкое с ноткой кислинки, идеально подходит для выпечки и еды."
                 },
                 florina: {
                     name: "Флорина",
