@@ -921,7 +921,7 @@ const translations = {
                 title: "Наша управленческая команда",
                 members: {
                     director: {
-                        name: "Латисев Николай",
+                        name: "Латышев Николай",
                         role: "Директор"
                     },
                     operations: {
@@ -929,7 +929,7 @@ const translations = {
                         role: "Операционный менеджер"
                     },
                     sales: {
-                        name: "Латисев Даниил",
+                        name: "Латышев Даниил",
                         role: "Менеджер по продажам"
                     }
                 }
