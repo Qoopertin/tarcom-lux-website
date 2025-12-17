@@ -223,9 +223,6 @@ const Products = () => {
                     {selectedCategory === 'plums' && (
                         <div id="plums-details" className="category-details">
                             <h2 className="details-title text-center mb-8">{t('products.details.plums.title')}</h2>
-                            <p className="details-text max-w-3xl mx-auto text-center mb-12">
-                                {t('products.details.plums.text')}
-                            </p>
                             <div className="products-grid">
                                 <ProductCard
                                     title={t('products.details.plums.varieties.stanley.name')}
