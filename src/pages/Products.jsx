@@ -178,9 +178,6 @@ const Products = () => {
             <div className="page-header">
                 <div className="container">
                     <h1 className="page-title">{t('products.title')}</h1>
-                    <p className="page-subtitle">
-                        {t('products.subtitle')}
-                    </p>
                 </div>
             </div>
 
@@ -208,6 +205,9 @@ const Products = () => {
                     {selectedCategory === 'apples' && (
                         <div id="apples-details" className="category-details">
                             <h2 className="details-title">{t('products.varietiesTitle')}</h2>
+                            <p className="page-subtitle text-center mb-12">
+                                {t('products.subtitle')}
+                            </p>
                             <div className="products-grid">
                                 {apples.map((apple, index) => (
                                     <ProductCard key={index} {...apple} onImageClick={(imgs, idx) => {
